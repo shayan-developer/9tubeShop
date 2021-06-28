@@ -1,6 +1,7 @@
 import Menu from "./components/Menu";
 import Home from "./components/Home";
 import Layout from "./components/Layout";
+import Checkout from "./components/Checkout";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
             <Home />
           </Route>
           <Route path="/checkout">
-            <h1>sss</h1>
+           <Checkout/>
           </Route>
         </Switch>
 

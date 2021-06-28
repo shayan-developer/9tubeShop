@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 .menu{
     height: 60px;
     display: flex;
@@ -8,9 +9,11 @@
     z-index: 100;
 }
 .logo{
-    width: 100px;
-    object-fit: contain;
+    font-family: 'Lobster', cursive;
+    color: #fd1212;
+    font-size:40px;
     margin: 18px 20px;
+    text-decoration: none;
 }
 .search{
     display: flex;

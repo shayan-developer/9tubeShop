@@ -1,16 +1,18 @@
 import React from 'react'
 import styles from "../../styles/Menu.module.css"
-import { MdSearch,MdShoppingBasket } from "react-icons/md";
+import { MdSearch, MdShoppingBasket } from "react-icons/md";
+import { Link } from 'react-router-dom';
 export default function Menu() {
     return (
         <nav className={styles.menu}>
-            <img className={styles.logo}
-            src='
-            https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Test-Logo.svg/1280px-Test-Logo.svg.png'
-             />
+            <Link to="/">
+                <div className={styles.logo}>
+                    9TuBe
+                </div>
+            </Link>
             <div className={styles.search}>
                 <input className={styles.input} />
-                <MdSearch className={styles.searchIcon}/>
+                <MdSearch className={styles.searchIcon} />
             </div>
             <div className={styles.nav}>
                 <div className={styles.options}>
@@ -25,10 +27,13 @@ export default function Menu() {
                     <span className={styles.lineOne}> Your </span>
                     <span className={styles.lineTwo} > Prime </span>
                 </div>
-                <div className={styles.basket}>
-                     <MdShoppingBasket className={styles.basketIcon}/>
-                     <span className={styles.count}>0</span>
-                </div>
+                <Link to="/checkout">
+                    <div className={styles.basket}>
+                        <MdShoppingBasket className={styles.basketIcon} />
+                        <span className={styles.count}>0</span>
+                    </div>
+                </Link>
+
             </div>
         </nav>
     )

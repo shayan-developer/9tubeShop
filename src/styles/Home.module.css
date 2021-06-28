@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     margin: 0 auto;
-    background-color: rgba(253, 18, 18,0.8);
     max-width: 1500px;
 }
 .container{

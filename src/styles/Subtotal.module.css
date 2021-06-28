@@ -1,0 +1,31 @@
+.subtotal{
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+}
+.count{
+    margin: 20px 0; 
+    font-weight: 600;
+}
+.total{
+    margin: 20px 0;
+    font-weight: 800;
+    font-size: 25px;
+}
+.btn{
+    border: 1px solid ;
+    margin-top: 10px;
+    border: none;
+    background-color: #fd1212;
+    width: 100%;
+    padding: 15px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #fffefe;
+    border-radius: 20px;
+    transition: all .3s; 
+}
+.btn:hover{
+    background-color: #fc7d7d;
+}

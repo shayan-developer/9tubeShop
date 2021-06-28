@@ -1,6 +1,16 @@
 import React from 'react'
 import styles from "../../styles/Product.module.css"
-function Product({ title, img, price }) {
+import {useStateValue} from "../Context/StateProvider"
+function Product({id, title, img, price }) {
+    const[state,dispath]=useStateValue()
+    const addToBasket=()=>{
+dispath({
+    type:"ADD",
+    item:{
+        id,title,img,price
+    }
+})
+    }
     return (
         <div className={styles.product}>
             <div className={styles.info}>
@@ -11,7 +21,9 @@ function Product({ title, img, price }) {
                 src={img}
                 className={styles.img}
             />
-            <button className={styles.btn}>Add to basket</button>
+            <button className={styles.btn}
+            onClick={addToBasket}
+            >Add to basket</button>
         </div>
     )
 }

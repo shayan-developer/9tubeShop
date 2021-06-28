@@ -1,4 +1,3 @@
-import Menu from "./components/Menu";
 import Home from "./components/Home";
 import Layout from "./components/Layout";
 import Checkout from "./components/Checkout";
@@ -15,7 +14,6 @@ function App() {
            <Checkout/>
           </Route>
         </Switch>
-
       </Layout>
     </Router>
   );

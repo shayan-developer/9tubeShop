@@ -65,6 +65,6 @@ font-size: 12px;
 .basket{
     display: flex;
     align-items: center;
-    color: white;
+    color: #fd1212;
     font-size: 28px;
 }

@@ -1,0 +1,11 @@
+.checkout{
+    height: 100vh;
+    padding: 10px;
+}
+.title{
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    border-bottom: 4px #fff dashed; 
+    padding: 20px 0;
+}

@@ -1,4 +1,25 @@
+.home{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    background-color: rgba(253, 18, 18,0.8);
+    max-width: 1500px;
+}
+.container{
+    width: 100%;
+}
+.row{
+    display: flex;
+    z-index: 1;
+    margin: 0 5px;
+}
 .img{
     width: 100%;
-    /* mask-image: linear-gradient(); */
+    height: 100vh;
+    background-image: url('https://i.pinimg.com/originals/96/a7/d6/96a7d6389a8104de8e637fd9e7f26769.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-origin:border-box ;
 }

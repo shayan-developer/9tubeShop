@@ -15,7 +15,7 @@ dispath({
         <div className={styles.product}>
             <div className={styles.info}>
                 <p>{title}</p>
-                <p className={styles.price}>${price}</p>
+                <p className={styles.price}>Price : ${price}</p>
             </div>
             <img
                 src={img}

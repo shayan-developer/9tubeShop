@@ -3,9 +3,14 @@ import styles from "../../styles/Menu.module.css"
 import { MdSearch, MdShoppingBasket } from "react-icons/md";
 import { Link } from 'react-router-dom';
 import { useStateValue } from '../Context/StateProvider';
+import { auth } from '../../firebase';
 export default function Menu() {
-    const [{ basket }, dispath] = useStateValue()
-    console.log(basket);
+    const [{ basket, user }, dispath] = useStateValue()
+    const authcheck = () => {
+        if (user) {
+            auth.signOut()
+        }
+    }
     return (
         <nav className={styles.menu}>
             <Link to="/">
@@ -18,10 +23,10 @@ export default function Menu() {
                 <MdSearch className={styles.searchIcon} />
             </div>
             <div className={styles.nav}>
-                <Link to="/login">
-                    <div className={styles.options}>
+                <Link to={!user&&"/login"}>
+                    <div className={styles.options} onClick={authcheck}>
                         <span className={styles.lineOne}> Hello </span>
-                        <span className={styles.lineTwo} >sign in </span>
+                        <span className={styles.lineTwo} >{user ? "Sign out" : "Sign in"} </span>
                     </div>
                 </Link>
 

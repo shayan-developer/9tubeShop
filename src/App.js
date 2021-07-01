@@ -13,7 +13,7 @@ function App() {
       if (user) {
         dispath({
           type: "SET_USER",
-          user
+          user:user
         })
       } else {
         dispath({

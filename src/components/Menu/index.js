@@ -4,8 +4,8 @@ import { MdSearch, MdShoppingBasket } from "react-icons/md";
 import { Link } from 'react-router-dom';
 import { useStateValue } from '../Context/StateProvider';
 export default function Menu() {
-    const[{basket},dispath]=useStateValue()
-console.log(basket);
+    const [{ basket }, dispath] = useStateValue()
+    console.log(basket);
     return (
         <nav className={styles.menu}>
             <Link to="/">
@@ -18,10 +18,13 @@ console.log(basket);
                 <MdSearch className={styles.searchIcon} />
             </div>
             <div className={styles.nav}>
-                <div className={styles.options}>
-                    <span className={styles.lineOne}> Hello </span>
-                    <span className={styles.lineTwo} >sign in </span>
-                </div>
+                <Link to="/login">
+                    <div className={styles.options}>
+                        <span className={styles.lineOne}> Hello </span>
+                        <span className={styles.lineTwo} >sign in </span>
+                    </div>
+                </Link>
+
                 <div className={styles.options}>
                     <span className={styles.lineOne}> Return </span>
                     <span className={styles.lineTwo} > & Orders </span>

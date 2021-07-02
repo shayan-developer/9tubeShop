@@ -1,37 +1,43 @@
-.menu{
+.menu {
     height: 60px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background-color: #131921;
     position: sticky;
     top: 0;
     z-index: 100;
 }
-.logo{
+
+.logo {
     font-family: 'Lobster', cursive;
     color: #fd1212;
-    font-size:40px;
+    font-size: 40px;
     margin: 18px 20px;
     text-decoration: none;
 }
-.search{
+
+.search {
     display: flex;
     flex: 1;
     align-items: center;
     border-radius: 24px !important;
     overflow: hidden;
 }
-.input{
+
+.input {
     height: 12px;
     padding: 10px;
     border: none !important;
     outline: none;
     width: 100%;
 }
-.input:focus{
+
+.input:focus {
     outline: none;
 }
-.searchIcon{
+
+.searchIcon {
     padding: 5px 10px;
     height: 22px !important;
     font-size: 22px;
@@ -39,31 +45,86 @@
     color: rgb(255, 255, 255);
     cursor: pointer;
 }
-.nav{
+
+.nav {
     display: flex;
     justify-content: space-evenly;
 }
-.options{
+
+.nav_menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: black !important;
+}
+.icons{
+    display: flex;
+}
+
+.options {
     display: flex;
     flex-direction: column;
     margin: 0 15px;
     color: rgb(255, 255, 255);
+    transition: all .5s ease-in-out;
+    cursor: pointer;
 }
-.lineOne{
-font-size: 12px;
+
+.options:hover {
+    color: #fd1212
 }
-.lineTwo{
+
+.lineOne {
+    font-size: 12px;
+}
+
+.lineTwo {
     font-size: 15px;
     font-weight: 800;
 }
-.count{
+
+.count {
     font-size: 15px;
     font-weight: 800;
     margin: 0 10px;
 }
-.basket{
+
+.basket {
     display: flex;
     align-items: center;
     color: #fd1212;
     font-size: 28px;
+}
+
+.bar {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 28px;
+    margin: 0 10px;
+    transition: all .5s ease-in-out;
+}
+
+.bar:hover {
+    color: #fd1212;
+    cursor: pointer;
+}
+
+@media only screen and (max-width:768px) {
+    .nav_menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+    .logo {
+        font-size: 30px;
+    }
 }

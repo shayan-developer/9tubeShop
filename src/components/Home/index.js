@@ -21,8 +21,6 @@ function Home() {
                         price={99}
                     />
 
-                </div>
-                <div className={styles.row}>
                     <Product
                         id="3234567"
                         title="DualSense™ Wireless Controller"
@@ -42,12 +40,9 @@ function Home() {
                         price={69}
                     />
 
-                </div>
-                <div className={styles.row}>
                     <Product
                         id="6234567"
-                        title="The PS5™ console unleashes new gaming possibilities that you never anticipated. Experience lightning fast loading with an ultra-high speed SSD, deeper immersion with support for haptic feedback, adaptive triggers, and 3D Audio, and an 
-                    all-new generation of incredible PlayStation® games."
+                        title="The PS5™ console unleashes new gaming possibilities that you never anticipated."
                         img="https://media.direct.playstation.com/is/image/sierialto/PS5-front-with-dualsense?$Background_Large$"
                         price={499}
                     />

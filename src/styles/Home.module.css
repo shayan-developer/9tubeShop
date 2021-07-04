@@ -15,7 +15,7 @@
     text-align: center;
     font-weight: 700;
     text-shadow: 4px 4px black;
-    animation: type 8s steps(60, end);
+    animation: type 10s steps(1000, end);
 }
 @keyframes type{ 
     from { 
@@ -28,7 +28,7 @@
 
 .row {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     z-index: 1;
     gap: 10px;
 }
@@ -40,16 +40,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('https://i.pinimg.com/originals/96/a7/d6/96a7d6389a8104de8e637fd9e7f26769.png');
+    background-image: url('../images/ps5.png');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-origin: border-box;
 }
 @media only screen and (max-width:768px){
     .text_hero {
         font-size: 60px;
+    }
+    .row{
+        grid-template-columns: 1fr 1fr;
+    }
+   
+    .img{
+        background-size: contain;
     }
 }
 @media only screen and (max-width:526px){

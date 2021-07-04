@@ -26,7 +26,7 @@
 }
 
 .input {
-    height: 12px;
+    height: 30px;
     padding: 10px;
     border: none !important;
     outline: none;
@@ -38,8 +38,8 @@
 }
 
 .searchIcon {
-    padding: 5px 10px;
-    height: 22px ;
+    height: 30px ;
+    width: 40px;
     font-size: 22px;
     background-color: #fd1212;
     color: rgb(255, 255, 255);
@@ -56,7 +56,6 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    background-color: black !important;
 }
 .icons{
     display: flex;
@@ -116,6 +115,7 @@
     .nav_menu {
         position: fixed;
         top: 3rem;
+        background-color: black !important;
         padding: 15px 0;
         flex-direction: column;
         background-color: #fff;

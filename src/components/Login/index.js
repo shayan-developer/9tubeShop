@@ -4,27 +4,21 @@ import styles from "../../styles/Login.module.css"
 import { auth } from "../../firebase"
 function Login() {
     const history = useHistory();
-    const [email, setemail] = useState('')
-    const [password, setpassword] = useState('')
     const [err, seterr] = useState('')
     const login = (e) => {
         e.preventDefault();
-        auth.signInWithEmailAndPassword(email, password)
-            .then(auth => {
-                history.push('/')
-            })
-            .catch(err => seterr("Email or password is incorrect !"))
-    }
-    const register = (e) => {
-        e.preventDefault();
-        auth.createUserWithEmailAndPassword(email, password)
-            .then(auth => {
-                console.log(auth)
-                if (auth) {
+         const input_email =  e.target[0].value
+        const input_password = e.target[1].value
+        if (input_email && input_password) {
+            auth.signInWithEmailAndPassword(input_email, input_password)
+                .then(auth => {
                     history.push('/')
-                }
-            })
-            .catch(err => alert(err.message))
+                })
+                .catch(err => seterr("Email or password is incorrect !"))
+        }
+        else {
+            seterr(" Email or password is empty ! ")
+        }
     }
     return (
         <div className={styles.login}>
@@ -33,20 +27,20 @@ function Login() {
             </Link>
             <div className={styles.login_container}>
                 <h4 className={styles.sign}>Sign-in</h4>
-                <form className={styles.form}>
+                <form className={styles.form} onSubmit={login}>
                     <p className={styles.label}>Email </p>
                     <input
                         type="email"
                         className={styles.input}
                         placeholder="Enter your email"
-                        onChange={e => setemail(e.target.value)}
+                        required
                     />
                     <p className={styles.label}>Password </p>
                     <input
                         type="password"
                         className={styles.input}
                         placeholder='Enter your password '
-                        onChange={e => setpassword(e.target.value)}
+                        required
                     />
                     <p className={styles.err}>
                         {err}
@@ -54,15 +48,16 @@ function Login() {
                     <button
                         type='submit'
                         className={styles.btn}
-                        onClick={login}
                     >Sign in</button>
-                    <button
-                        type='submit'
-                        className={styles.btn}
-                        onClick={register}
-                    >Create your account</button>
                 </form>
+                <p className={styles.text}>
+                    if you dont have account click on
 
+                    <Link to="/register" className={styles.link}>
+                        create your acccount
+                    </Link>
+
+                </p>
             </div>
         </div>
     )

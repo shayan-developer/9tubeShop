@@ -1,6 +1,6 @@
 .login {
     width: 100%;
-    min-height: 100vh;
+  min-height: 100vh;
     display: flex;
     flex-direction: column;
     background-color: black;
@@ -44,17 +44,6 @@
     margin: 10px 0;
 }
 
-.text {
-    color: #fd1212;
-    font-size: 16px;
-    margin: 15px 0;
-}
-
-.link {
-    margin: 0 5px;
-    color:rgb(5, 184, 255)
-}
-
 .sign {
     font-family: 'Lobster', cursive, sans-serif;
     color: #fd1212;
@@ -91,7 +80,7 @@
 }
 
 @media only screen and (max-width:768px) {
-    .login_container {
+    .login_container{
         width: 70%;
         padding: 20px;
         margin: 20px 0;
@@ -103,21 +92,15 @@
         font-size: 25px;
         margin-bottom: 25px;
     }
-    .label {
+    .label{
         font-size: 15px;
-        margin-top: 25px;
+        margin-top:25px ;
     }
-    .input {
+    .input{
         margin-top: 15px;
         font-size: 13px;
     }
-    .text {
-        font-size: 13px;
-    }
-    .err{
-        font-size: 12px;
-    }
-    .btn {
+    .btn{
         padding: 8px;
         font-size: 12px;
         margin-top: 25px;
@@ -125,7 +108,7 @@
 }
 
 @media only screen and (max-width:526px) {
-    .login_container {
+    .login_container{
         padding: 17px;
         margin: 15px 0;
     }
@@ -136,17 +119,15 @@
         font-size: 20px;
         margin-bottom: 25px;
     }
-    .label {
+    .label{
         font-size: 14px;
-        margin-top: 25px;
+        margin-top:25px ;
     }
-    .text {
-        font-size: 10px;
+    .input{
+        margin-top: 15px;
+        font-size: 13px;
     }
-    .err{
-        font-size: 10px;
-    }
-    .btn {
+    .btn{
         padding: 8px;
         font-size: 12px;
     }

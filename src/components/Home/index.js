@@ -14,8 +14,8 @@ function Home() {
                     <Product
                         id="1234567"
                         title="DualSense™ Wireless Controller"
-                        img="https://media.direct.playstation.com/is/image/sierialto/dualsense-ps5-controller-white-accessory-front?$Background_Large$"
-                        price={69}
+                        img="https://media.direct.playstation.com/is/image/sierialto/dualsense-ps5-controller-red-accessory-front?$Background_Large$"
+                        price={74}
                     />
                     <Product
                         id="2234567"

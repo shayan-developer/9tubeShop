@@ -2,6 +2,7 @@
     background-color: #fff;
     padding: 10px;
     border-radius: 10px;
+    margin: 20px 0;
 }
 .count{
     margin: 20px 0; 
@@ -28,4 +29,34 @@
 }
 .btn:hover{
     background-color: #fc7d7d;
+}
+@media only screen and (max-width:768px){
+   .subtotal{
+       padding: 8px;
+   }
+    .count{
+        font-size: 13px;
+    }
+    .total{
+        font-size:18px ;
+    }
+    .btn{
+        padding: 10px;
+        font-size: 12px;
+    }
+}
+@media only screen and (max-width:768px){
+    .subtotal{
+        padding: 6px;
+    }
+     .count{
+         font-size: 10px;
+     }
+     .total{
+         font-size:15px ;
+     }
+     .btn{
+         padding: 8px;
+         font-size: 10px;
+     }
 }

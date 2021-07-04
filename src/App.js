@@ -8,7 +8,8 @@ import React, { useEffect } from "react"
 import { auth } from "./firebase";
 import { useStateValue } from "./components/Context/StateProvider";
 function App() {
-  const [{ }, dispath] = useStateValue()
+  const [{ basket }, dispath] = useStateValue()
+  console.log = console.warn = console.error = () => {};
   useEffect(() => {
     auth.onAuthStateChanged(user => {
       if (user) {

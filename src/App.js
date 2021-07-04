@@ -25,7 +25,7 @@ function App() {
       }
 
     })
-  }, [])
+  }, [dispath])
   return (
     <Router>
       <Switch>

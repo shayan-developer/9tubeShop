@@ -6,6 +6,9 @@ function Home() {
         <div className={styles.home}>
             <div className={styles.container}>
                 <div className={styles.img}>
+                    <div className={styles.text_hero}>
+                        Buy And Enjoy !
+                    </div>
                 </div>
                 <div className={styles.row}>
                     <Product

@@ -61,7 +61,7 @@
     font-size: 12px;
     }
 }
-@media only screen and (max-width:526px) {
+@media only screen and (max-width:768px) {
     .product{
         padding: 10px;
     }
@@ -77,6 +77,26 @@
     }
     .btn{
         padding: 8px;
+        font-size: 11px;
+    }
+}
+@media only screen and (max-width:526px) {
+    .product{
+        padding: 8px;
+        margin: 1px;
+    }
+    .info{
+        font-size: 10px;
+    }
+    .price{
+        font-size: 12px;
+    }
+    .img{
+        margin: 10px 0 ;
+        height: 95px;
+    }
+    .btn{
+        padding: 5px;
         font-size: 11px;
     }
 }

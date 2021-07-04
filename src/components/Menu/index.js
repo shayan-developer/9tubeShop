@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from "../../styles/Menu.module.css"
 import { MdSearch, MdShoppingBasket } from "react-icons/md";
 import { Link } from 'react-router-dom';
@@ -7,6 +7,12 @@ import { auth } from '../../firebase';
 import { FaBars } from "react-icons/fa";
 export default function Menu() {
     const [{ basket, user }, dispath] = useStateValue()
+    const [left, setleft] = useState(true)
+    
+    const navChange=()=>{
+        setleft(!left)
+    }
+    
     const authcheck = () => {
         if (user) {
             auth.signOut()
@@ -21,12 +27,12 @@ export default function Menu() {
             </Link>
             {/* ==== */}
 
-            <div className={styles.nav_menu}>
+            <div className={styles.nav_menu} style={{left:left?"-100%":"0"}}>
                 <div className={styles.search}>
                     <input className={styles.input} />
                     <MdSearch className={styles.searchIcon} />
                 </div>
-                <div className={styles.nav}>
+                <div className={styles.nav} >
                     <Link to={!user && "/login"}>
                         <div className={styles.options} onClick={authcheck}>
                             <span className={styles.lineOne}> Hello </span>
@@ -53,7 +59,7 @@ export default function Menu() {
                         <span className={styles.count}>{basket.length}</span>
                     </div>
                 </Link>
-                <div className={styles.bar} >
+                <div className={styles.bar} onClick={navChange}>
                     <FaBars className={styles.icon_bar} />
                 </div>
             </div>

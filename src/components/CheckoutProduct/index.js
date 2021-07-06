@@ -2,7 +2,8 @@ import React from 'react'
 import styles from "../../styles/CheckoutProduct.module.css"
 import { useStateValue } from '../Context/StateProvider'
 function CheckoutProduct({ img, id, title, price }) {
-    const [{ basket }, dispath] = useStateValue()
+    const state = useStateValue()
+    const dispath=state[1]
     const removing = () => {
         dispath({
             type: "REMOVE", id

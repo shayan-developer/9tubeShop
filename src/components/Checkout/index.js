@@ -5,7 +5,8 @@ import Subtotal from '../Subtotal'
 import CheckoutProduct from "../CheckoutProduct"
 import { MdSentimentDissatisfied } from "react-icons/md";
 function Checkout() {
-    const [{ basket }, dispath] = useStateValue()
+    const state = useStateValue()
+    const { basket }=state[0]
 
     return (
         <div className={styles.checkout}>
@@ -16,7 +17,7 @@ function Checkout() {
                 <p className={styles.title}>Your Shopping Basket : </p>
             </div>
             {
-                    basket.length >= 1 ? basket.map((item, i) => <CheckoutProduct {...item} />) :
+                    basket.length >= 1 ? basket.map((item, i) => <CheckoutProduct {...item} key={i}/>) :
                         <div className={styles.empty}>
                             <div className={styles.icon}>
                             <MdSentimentDissatisfied/>

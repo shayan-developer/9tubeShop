@@ -3,7 +3,8 @@ import styles from "../../styles/Subtotal.module.css"
 import { calc } from '../Context/reducer'
 import { useStateValue } from '../Context/StateProvider'
 function Subtotal() {
-    const[{basket},dispath]=useStateValue()
+    const state = useStateValue()
+    const {basket}=state[0]
     return (
         <div className={styles.subtotal}>
             <p className={styles.count}>Number of items : {basket.length}</p>

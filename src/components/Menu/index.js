@@ -6,7 +6,8 @@ import { useStateValue } from '../Context/StateProvider';
 import { auth } from '../../firebase';
 import { FaBars } from "react-icons/fa";
 export default function Menu() {
-    const [{ basket, user }, dispath] = useStateValue()
+    const state = useStateValue()
+    const { basket, user }=state[0]
     const [left, setleft] = useState(true)
     
     const navChange=()=>{

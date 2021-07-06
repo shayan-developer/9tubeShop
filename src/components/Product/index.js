@@ -5,7 +5,8 @@ import { useStateValue } from "../Context/StateProvider";
 import { TiTick } from "react-icons/ti";
 import { FaTimesCircle } from "react-icons/fa";
 function Product({ id, title, img, price }) {
-    const [state, dispath] = useStateValue()
+    const state = useStateValue()
+    const  dispath = state[1]
 
     const openNotification = () => {
         notification.info({

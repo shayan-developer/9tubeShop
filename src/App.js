@@ -8,8 +8,8 @@ import React, { useEffect } from "react"
 import { auth } from "./firebase";
 import { useStateValue } from "./components/Context/StateProvider";
 function App() {
-  const [{ basket }, dispath] = useStateValue()
-  console.log = console.warn = console.error = () => {};
+  const state = useStateValue()
+  const dispath=state[1]
   useEffect(() => {
     auth.onAuthStateChanged(user => {
       if (user) {
@@ -30,7 +30,7 @@ function App() {
   return (
     <Router>
       <Switch>
-        <Route path="/login">
+        <Route path="/login" component={Login}>
           <Login />
         </Route>
         <Route path="/register">

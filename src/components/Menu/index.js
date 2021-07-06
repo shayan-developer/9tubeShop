@@ -36,17 +36,14 @@ export default function Menu() {
                 <div className={styles.nav} >
                     <Link to={!user && "/login"}>
                         <div className={styles.options} onClick={authcheck}>
-                            <span className={styles.lineOne}> Hello </span>
                             <span className={styles.lineTwo} >{user ? "Sign out" : "Sign in"} </span>
                         </div>
                     </Link>
 
                     <div className={styles.options}>
-                        <span className={styles.lineOne}> Return </span>
-                        <span className={styles.lineTwo} > & Orders </span>
+                        <span className={styles.lineTwo} > Orders </span>
                     </div>
                     <div className={styles.options}>
-                        <span className={styles.lineOne}> Your </span>
                         <span className={styles.lineTwo} > Prime </span>
                     </div>
 

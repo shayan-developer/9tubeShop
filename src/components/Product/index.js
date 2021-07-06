@@ -6,7 +6,7 @@ import { TiTick } from "react-icons/ti";
 import { FaTimesCircle } from "react-icons/fa";
 function Product({ id, title, img, price }) {
     const state = useStateValue()
-    const  dispath = state[1]
+    const dispath = state[1]
 
     const openNotification = () => {
         notification.info({
@@ -33,8 +33,8 @@ function Product({ id, title, img, price }) {
     return (
         <div className={styles.product}>
             <div className={styles.info}>
-                <p>{title}</p>
-                <p className={styles.price}>Price : ${price}</p>
+                <div>{title}</div>
+                <div className={styles.price}>Price : ${price}</div>
             </div>
             <img
                 src={img}

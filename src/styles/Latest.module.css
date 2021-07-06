@@ -1,0 +1,17 @@
+
+.row{
+    padding: 10px;
+    
+}
+@media only screen and (max-width:768px){
+    .row{
+        padding: 5px;
+        
+    }
+}
+@media only screen and (max-width:526px){
+    .row{
+        padding:  0;
+        
+    }
+}

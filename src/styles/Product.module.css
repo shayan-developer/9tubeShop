@@ -3,12 +3,12 @@
     flex-direction: column;
     background-color: white;
     z-index: 1;
+    height: 100%;
+    min-width: 100px;
     align-items: center;
     justify-content: space-between;
     border-radius: 25px;
-    margin: 10px;
     padding: 20px;
-    min-width: 100px;
 }
 
 .contain_notif {
@@ -49,25 +49,25 @@
 .img {
     max-height: 200px;
     width: 100%;
+    margin: 4px 0;
     object-fit: contain;
 }
 
 .info {
-    margin-bottom: 15px;
     color: #000000;
     width: 100%;
     font-weight: 600;
 }
 
 .price {
-    margin-top: 10px;
+    margin: 5px 0;
     font-size: 20px;
     font-weight: 800;
 }
 
 .btn {
     border: 1px solid;
-    margin-top: 10px;
+    margin-top: 5px;
     border: none;
     background-color: #fd1212;
     width: 100%;
@@ -95,7 +95,6 @@
         font-size: 14px;
     }
     .img {
-        margin: 25px 0;
         height: 130px;
     }
     .btn {
@@ -125,7 +124,7 @@
 @media only screen and (max-width:526px) {
     .product {
         padding: 8px;
-        margin: 1px;
+        margin: 10px 5px;
     }
     .info {
         font-size: 10px;
@@ -134,7 +133,6 @@
         font-size: 12px;
     }
     .img {
-        margin: 10px 0;
         height: 95px;
     }
     .btn {

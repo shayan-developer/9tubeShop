@@ -12,7 +12,8 @@
 }
 
 .contain_notif {
-    background-color: black;
+    background-color: rgba(0, 0, 0,0.7);
+    backdrop-filter: blur(30px);
     color: white !important;
     top:38px !important;
 }
@@ -24,7 +25,7 @@
 
 .title_notif {
     color: #fd1212;
-    font-size: 19px;
+    font-size: 20px;
     font-weight: 700;
 }
 
@@ -66,13 +67,12 @@
 }
 
 .btn {
-    border: 1px solid;
     margin-top: 5px;
     border: none;
     background-color: #fd1212;
     width: 100%;
-    padding: 15px;
-    font-size: 15px;
+    padding: 10px;
+    font-size: 19px;
     font-weight: 700;
     cursor: pointer;
     color: #fffefe;

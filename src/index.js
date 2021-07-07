@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import './styles/index.css';
 import 'antd/dist/antd.css'
 import App from './App';
+import "./i18n"
 import {StateProvider} from "./components/Context/StateProvider"
 import { reducer, initialState } from './components/Context/reducer';
 ReactDOM.render(

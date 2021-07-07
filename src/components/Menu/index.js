@@ -5,15 +5,18 @@ import { Link } from 'react-router-dom';
 import { useStateValue } from '../Context/StateProvider';
 import { auth } from '../../firebase';
 import { FaBars } from "react-icons/fa";
+import { useTranslation } from "react-i18next";
+import MyRadio from "../MyRadio"
 export default function Menu() {
+    const { t } = useTranslation()
     const state = useStateValue()
-    const { basket, user }=state[0]
+    const { basket, user } = state[0]
     const [left, setleft] = useState(true)
-    
-    const navChange=()=>{
+
+    const navChange = () => {
         setleft(!left)
     }
-    
+
     const authcheck = () => {
         if (user) {
             auth.signOut()
@@ -26,31 +29,34 @@ export default function Menu() {
                     9TuBe
                 </div>
             </Link>
-            {/* ==== */}
+            
 
-            <div className={styles.nav_menu} style={{left:left?"-100%":"0"}}>
+            <div className={styles.nav_menu} style={{ left: left ? "-100%" : "0" }}>
                 <div className={styles.search}>
                     <input className={styles.input} />
                     <MdSearch className={styles.searchIcon} />
                 </div>
+                
                 <div className={styles.nav} >
                     <Link to={!user && "/login"}>
                         <div className={styles.options} onClick={authcheck}>
-                            <span className={styles.lineTwo} >{user ? "Sign out" : "Sign in"} </span>
+                            <span className={styles.lineTwo} >{user ? t("sign_out") : t("sign_in")} </span>
                         </div>
                     </Link>
 
                     <div className={styles.options}>
-                        <span className={styles.lineTwo} > Orders </span>
+                        <span className={styles.lineTwo} > {t("orders")} </span>
                     </div>
                     <div className={styles.options}>
-                        <span className={styles.lineTwo} > Prime </span>
+                        <span className={styles.lineTwo} > {t("about_us")} </span>
                     </div>
 
                 </div>
-                {/* === */}
+                
             </div>
+            
             <div className={styles.icons}>
+            <MyRadio />
                 <Link to="/checkout">
                     <div className={styles.basket}>
                         <MdShoppingBasket className={styles.basketIcon} />

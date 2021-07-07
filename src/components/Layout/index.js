@@ -1,11 +1,18 @@
+import Footer from "../Footer"
 import React from 'react'
 import Menu from '../Menu'
-
-function Layout({children}) {
+import { ConfigProvider } from 'antd';
+import { useTranslation } from "react-i18next";
+function Layout({ children }) {
+    const { i18n } = useTranslation()
+    const lang = i18n.language
     return (
-        <div style={{backgroundColor:"black"}}>
-            <Menu/>
-            {children}
+        <div style={{ backgroundColor: "black" }}>
+            <Menu />
+            <ConfigProvider direction={lang==="fa"?"rtl":"ltr"}>
+                {children}
+            </ConfigProvider>
+            <Footer />
         </div>
     )
 }

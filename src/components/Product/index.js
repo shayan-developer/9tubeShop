@@ -35,8 +35,8 @@ function Product({ id, title, img, price }) {
     return (
         <div className={styles.product}>
             <div className={styles.info}>
-                <div>{title}</div>
-                <div className={styles.price}>{t("price")} : ${price}</div>
+                <div ><span className={styles.title}>{t("product_name")}</span> : {title}</div>
+                <div className={styles.price}>{t("price")} :{` $ ${price} `}</div>
             </div>
             <img
                 src={img}

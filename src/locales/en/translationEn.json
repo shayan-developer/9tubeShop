@@ -7,5 +7,8 @@
     "latest":"The latest products" ,
     "add_basket":"Add to basket",
     "price":"Price",
-    "added_basket":"Added to basket"
+    "added_basket":"Added to basket",
+    "up":"Up",
+    "phone":"Phone number",
+    "product_name":"Product Name"
 }

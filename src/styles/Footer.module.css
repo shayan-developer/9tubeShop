@@ -1,0 +1,155 @@
+.footer {
+    background-color: #fd1212;
+    width: 100%;
+    padding: 5px;
+    height: 100%;
+    margin-top: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.up {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    opacity: 0;
+    cursor: pointer;
+    animation-name: winking;
+    animation-duration: 2s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
+}
+
+.up_text {
+    font-size: 25px;
+}
+
+.up_icon {
+    display: flex;
+    align-items: center;
+    font-size: 70px;
+}
+
+@keyframes winking {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    50% {
+        opacity: 1;
+    }
+    75% {
+        opacity: 0;
+    }
+    1000% {
+        opacity: 1;
+    }
+}
+
+.logo_contain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.logo {
+    font-family: 'Lobster', cursive, sans-serif;
+    color: #fff;
+    font-size: 50px;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.enjoy {
+    color: #fff;
+    margin: 10px 0;
+    font-size: 17px;
+    font-weight: 700;
+}
+.email{
+    color: #fff;
+    font-size: 17px;
+    font-weight: 500;
+}
+.social{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    color: #fff;
+}
+.icon{
+    font-size: 30px;
+    cursor: pointer;
+    transition: .3s ease-in;
+}
+.icon:hover{
+    color: black;
+}
+@media only screen and (max-width:768px) {
+    .up_text {
+        font-size: 23px;
+    }
+    
+    .up_icon {
+        font-size: 60px;
+    }
+    .logo {
+        font-size: 40px;
+        margin: 0 8px;
+    }
+    .enjoy {
+        margin: 10px 0;
+        font-size: 15px;
+    }
+    .email{
+        font-size: 15px;
+    }
+    .social{
+        margin-top: 15px;
+    }
+    .icon{
+        font-size: 25px;
+    }
+}
+@media only screen and (max-width:500px) {
+    .header{
+        padding: 5px 10px;
+    }
+    .up_text {
+        font-size: 16px;
+    }
+    
+    .up_icon {
+        font-size: 40px;
+    }
+    .logo {
+        font-size: 30px;
+        margin: 0 7px;
+    }
+    .enjoy {
+        margin: 8px 0;
+        font-size: 11px;
+    }
+    .email{
+        font-size: 11px;
+    }
+    .social{
+        margin-top: 15px;
+    }
+    .icon{
+        font-size: 18px;
+    }
+}

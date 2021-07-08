@@ -16,5 +16,17 @@
     "your_basket":"Your Shopping Basket ",
     "empty_basket":"Your Shopping Basket is empty ",
     "payment":"Payment",
-    "remove_basket":"Remove from basket"
+    "remove_basket":"Remove from basket",
+    "email":"Email",
+    "password":"Password",
+    "email_place":"Enter your email",
+    "password_place":"Enter your password",
+    "err_login1":"Email or password is incorrect",
+    "err_login2":"Email or password is empty",
+    "login_text":"if you dont have account click on",
+    "create_acc":"Create your acccount",
+    "re_password":"Repeat password",
+    "repass_place":"Repeat your password",
+    "err_register":"Your password does not match the password you repeated"
+    
 }

@@ -1,6 +1,8 @@
+.row{
+    min-height: 100vh;
+}
 .login {
     width: 100%;
-    min-height: 100vh;
     display: flex;
     flex-direction: column;
     background-color: black;
@@ -77,8 +79,8 @@
     background-image: linear-gradient(to right, #f87878, #ee1f1f, #f34141, #fd1212);
     width: 100%;
     padding: 10px;
-    font-size: 15px;
-    font-weight: 700;
+    font-size: 18px;
+    font-weight: 600;
     cursor: pointer;
     color: #fffefe;
     border-radius: 20px;

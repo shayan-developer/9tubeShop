@@ -10,7 +10,12 @@
     "added_basket":"به سبد خرید اضافه شد",
     "up":"بالا",
     "phone":"شماره تماس",
-    "product_name":"نام محصول"
-
+    "product_name":"نام محصول",
+    "basket_item":"تعداد محصولات در سبد خرید شما",
+    "total":"جمع نهایی ",
+    "your_basket":" سبد خرید شما",
+    "empty_basket":" سبد خرید شما خالی است",
+    "payment":"پرداخت",
+    "remove_basket":"حذف از سبد خرید"
 
 }

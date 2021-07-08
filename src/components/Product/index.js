@@ -6,7 +6,7 @@ import { TiTick } from "react-icons/ti";
 import { FaTimesCircle } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 function Product({ id, title, img, price }) {
-    const {t} =useTranslation()
+    const { t } = useTranslation()
     const state = useStateValue()
     const dispath = state[1]
 
@@ -35,8 +35,9 @@ function Product({ id, title, img, price }) {
     return (
         <div className={styles.product}>
             <div className={styles.info}>
-                <div ><span className={styles.title}>{t("product_name")}</span> : {title}</div>
-                <div className={styles.price}>{t("price")} :{` $ ${price} `}</div>
+                <div className={styles.title}>{t("product_name")}</div> 
+                <div > {title}</div>
+                <div className={styles.price}> {t("price")} : {` $ ${price} `} </div>
             </div>
             <img
                 src={img}

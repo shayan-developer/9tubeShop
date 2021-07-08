@@ -3,10 +3,12 @@
     padding: 10px;
     border-radius: 10px;
     margin: 20px 0;
+    width: 100%;
 }
 .count{
     margin: 20px 0; 
     font-weight: 600;
+    font-size: 17px;
 }
 .total{
     margin: 20px 0;
@@ -20,7 +22,7 @@
     background-color: #fd1212;
     width: 100%;
     padding: 15px;
-    font-size: 15px;
+    font-size: 17px;
     font-weight: 700;
     cursor: pointer;
     color: #fffefe;

@@ -10,5 +10,11 @@
     "added_basket":"Added to basket",
     "up":"Up",
     "phone":"Phone number",
-    "product_name":"Product Name"
+    "product_name":"Product Name",
+    "basket_item":"Number of products in your basket",
+    "total":"Total prices",
+    "your_basket":"Your Shopping Basket ",
+    "empty_basket":"Your Shopping Basket is empty ",
+    "payment":"Payment",
+    "remove_basket":"Remove from basket"
 }

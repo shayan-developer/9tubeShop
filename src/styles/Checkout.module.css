@@ -1,5 +1,8 @@
-.checkout{
+.row{
     min-height: 100vh;
+}
+.checkout{
+    height: 100%;
     padding: 10px;
 }
 .title{

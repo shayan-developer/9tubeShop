@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Radio } from "antd"
 import { useTranslation } from "react-i18next";
 import styles from "../../styles/Radio.module.css"
 function MyRadio() {
     const { i18n } = useTranslation()
-    const [check, setcheck] = useState({ en: false, fa: true })
+    const lang=i18n.language
+    const [check, setcheck] = useState({ en: false, fa: false})
     const changeLang = (e) => {
         console.log(e);
         i18n.changeLanguage(e.target.value)
@@ -14,9 +15,16 @@ function MyRadio() {
             setcheck({ fa: true })
         }
     }
+    useEffect(() => {
+        if (lang==="fa") {
+            setcheck({fa:true})
+        } else {
+            setcheck({en:true})
+        }
+    }, [])
     return (
         <Radio.Group
-            defaultValue={'fa'}
+            defaultValue={lang}
             buttonStyle="solid"
             onChange={changeLang}
             size='small'

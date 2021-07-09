@@ -5,9 +5,11 @@ import { useStateValue } from "../Context/StateProvider";
 import { TiTick } from "react-icons/ti";
 import { FaTimesCircle } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
+import { toman } from "../../lib/Totoman";
 function Product({ id, title, img, price }) {
-    const { t } = useTranslation()
+    const { t ,i18n} = useTranslation()
     const state = useStateValue()
+    const lang= i18n.language
     const dispath = state[1]
 
     const openNotification = () => {
@@ -37,7 +39,8 @@ function Product({ id, title, img, price }) {
             <div className={styles.info}>
                 <div className={styles.title}>{t("product_name")}</div> 
                 <div > {title}</div>
-                <div className={styles.price}> {t("price")} : {` $ ${price} `} </div>
+                <div className={styles.price}> {t("price")}</div>
+                <div >{lang==="fa"?toman(price):` $ ${price}`} </div>
             </div>
             <img
                 src={img}

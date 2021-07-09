@@ -5,6 +5,8 @@ import styles from "../../styles/Register.module.css"
 import { useTranslation } from "react-i18next";
 import { Col, Row } from 'antd';
 import { ConfigProvider } from 'antd';
+import { Helmet } from 'react-helmet'
+
 function Register() {
     const { t, i18n } = useTranslation()
     const history = useHistory();
@@ -32,6 +34,10 @@ function Register() {
 
     }
     return (
+        <>
+        <Helmet>
+            <title> {t("create_acc")} </title>
+        </Helmet>
         <ConfigProvider direction={lang === "fa" ? "rtl" : "ltr"}>
             <Row className={styles.row}>
                 <Col span={24} className={styles.login}>
@@ -75,6 +81,7 @@ function Register() {
                 </Col>
             </Row>
         </ConfigProvider>
+        </>
     )
 }
 

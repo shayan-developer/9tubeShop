@@ -5,6 +5,7 @@ import { auth } from "../../firebase"
 import { useTranslation } from "react-i18next";
 import { Col, Row } from 'antd';
 import { ConfigProvider } from 'antd';
+import { Helmet } from 'react-helmet'
 
 function Login() {
     const { t, i18n } = useTranslation()
@@ -27,6 +28,10 @@ function Login() {
         }
     }
     return (
+        <>
+        <Helmet>
+            <title> {t("sign_in")} </title>
+        </Helmet>
         <ConfigProvider direction={lang === "fa" ? "rtl" : "ltr"}>
             <Row className={styles.row}>
                 <Col span={24} className={styles.login}>
@@ -69,6 +74,7 @@ function Login() {
                 </Col>
             </Row>
         </ConfigProvider>
+        </>
     )
 }
 

@@ -8,6 +8,12 @@
     font-size: 15px;
  
 }
+.btn::before{
+    content: none !important;
+}
+.btn:hover{
+    color: #fd1212;
+}
 @media only screen and (max-width:768px) {
     .btn{
         font-size: 11px;

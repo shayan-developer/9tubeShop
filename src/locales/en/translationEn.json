@@ -27,6 +27,8 @@
     "create_acc":"Create your acccount",
     "re_password":"Repeat password",
     "repass_place":"Repeat your password",
-    "err_register":"Your password does not match the password you repeated"
+    "err_register":"Your password does not match the password you repeated",
+    "shopping_bas":"Shopping basket",
+    "home":"Home page"
     
 }

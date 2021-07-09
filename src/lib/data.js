@@ -3,7 +3,7 @@ export const data = [
         id: "1234567",
         title: "DualSense™ Wireless Controller",
         img: "https://media.direct.playstation.com/is/image/sierialto/dualsense-ps5-controller-red-accessory-front?$Background_Large$",
-        price: 74
+        price: 110
     },
     {
         id: "2234567",
@@ -21,7 +21,7 @@ export const data = [
         id: "6234567",
         title: "The PS5™ console ",
         img: "https://media.direct.playstation.com/is/image/sierialto/PS5-front-with-dualsense?$Background_Large$",
-        price: 499
+        price: 916
     },
     {
         id: "6234567",

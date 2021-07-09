@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import styles from "../../styles/Home.module.css"
 import { Row, Col } from "antd"
 import LatestProduct from '../LatesProduct'
@@ -7,9 +7,6 @@ import { Helmet } from 'react-helmet'
 
 function Home() {
     const {t} = useTranslation()
-    useEffect(() => {
-        document.title = t("home")
-    }, [])
     return (
         <>
         <Helmet>

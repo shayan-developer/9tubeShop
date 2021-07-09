@@ -21,7 +21,7 @@ function MyRadio() {
         } else {
             setcheck({en:true})
         }
-    }, [])
+    }, [lang])
     return (
         <Radio.Group
             defaultValue={lang}

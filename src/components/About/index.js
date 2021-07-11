@@ -4,12 +4,12 @@ import styles from "../../styles/About.module.css"
 import img from "../../images/god.jpg"
 import { useTranslation } from "react-i18next";
 function About() {
-    const { t, i18n } = useTranslation();
+    const { t} = useTranslation();
     return (
         <Row className={styles.row}>
             <Col span={24} className={styles.col}>
                 <div className={styles.contain}>
-                    <img src={img} className={styles.img} />
+                    <img src={img} className={styles.img} alt="god of war"/>
                     <div className={styles.about}>
                         <div className={styles.content}>
                             <div className={styles.titles}>

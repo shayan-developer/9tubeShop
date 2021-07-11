@@ -29,14 +29,14 @@ export default function Menu() {
                     9TuBe
                 </div>
             </Link>
-            
+
 
             <div className={styles.nav_menu} style={{ left: left ? "-100%" : "0" }}>
                 <div className={styles.search}>
                     <input className={styles.input} />
                     <MdSearch className={styles.searchIcon} />
                 </div>
-                
+
                 <div className={styles.nav} >
                     <Link to={!user && "/login"}>
                         <div className={styles.options} onClick={authcheck}>
@@ -47,16 +47,17 @@ export default function Menu() {
                     <div className={styles.options}>
                         <span className={styles.lineTwo} > {t("orders")} </span>
                     </div>
-                    <div className={styles.options}>
-                        <span className={styles.lineTwo} > {t("about_us")} </span>
-                    </div>
-
+                    <Link to="/about">
+                        <div className={styles.options}>
+                            <span className={styles.lineTwo} > {t("about_us")} </span>
+                        </div>
+                    </Link>
                 </div>
-                
+
             </div>
-            
+
             <div className={styles.icons}>
-            <MyRadio />
+                <MyRadio />
                 <Link to="/checkout">
                     <div className={styles.basket}>
                         <MdShoppingBasket className={styles.basketIcon} />

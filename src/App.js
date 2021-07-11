@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import React, { useEffect } from "react"
 import { auth } from "./firebase";
 import { useStateValue } from "./components/Context/StateProvider";
+import About from "./components/About";
 function App() {
   const state = useStateValue()
   const dispath=state[1]
@@ -39,6 +40,11 @@ function App() {
         <Route exact path='/'>
           <Layout>
             <Home />
+          </Layout>
+        </Route>
+        <Route exact path='/about'>
+          <Layout>
+            <About />
           </Layout>
         </Route>
         <Route path="/checkout">

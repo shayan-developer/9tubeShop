@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import React, { useEffect, lazy, Suspense } from "react"
 import { auth } from "./firebase";
 import { useStateValue } from "./components/Context/StateProvider";
+
 import Spiner from "./components/Spiner";
 const Layout = lazy(() => import("./components/Layout"))
 const Home = lazy(() => import("./components/Home"))
@@ -43,7 +44,6 @@ function App() {
           <Route exact path='/'>
             <Layout>
               <Home />
-
             </Layout>
           </Route>
           <Route exact path='/about'>

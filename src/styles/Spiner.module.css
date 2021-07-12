@@ -9,15 +9,29 @@
     height: 100vh;
     background-color: black;
 }
-
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 .spin {
     font-size: 70px;
     color: #fd1212;
 }
-
+.text{
+    color: #fd1212;
+    font-size: 20px;
+    margin-top: 10px;
+}
 @media only screen and (max-width:768px) {
     .spin {
         font-size: 40px;
         color: #fd1212;
+    }
+    .text{
+        color: #fd1212;
+        font-size: 15px;
+        margin-top: 10px;
     }
 }

@@ -139,10 +139,12 @@
 @media only screen and (max-width:526px) {
     .contain {
       height: 200px;
+      
     }
     .info {
         width: 170px;
         margin-right: 5px;
+        padding-right:5px;
     }
     .title {
         font-size: 11px;

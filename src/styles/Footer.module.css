@@ -38,17 +38,17 @@
 
 @keyframes winking {
     0% {
-        opacity: 0;
+        opacity: 1;
         transform: translateY(40px);
     }
     50% {
-        opacity: 1;
-    }
-    75% {
         opacity: 0;
     }
-    1000% {
+    75% {
         opacity: 1;
+    }
+    1000% {
+        opacity: 0;
     }
 }
 

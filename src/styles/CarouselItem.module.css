@@ -4,7 +4,7 @@
     height: 500px;
     display: flex;
     align-items: center;
-    background-color: #fff;
+    background-color: #FFFEF7;
     padding: 0 10px;
 }
 
@@ -18,6 +18,168 @@
 .info {
     position: absolute;
     color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     font-size: 40px;
-    right: 0;
+    font-weight: 800;
+    right: 3%;
+    width: 450px;
+    margin-right: 35px;
+}
+
+.title {
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.price {
+    margin: 20px 0;
+    font-size: 30px;
+    direction: rtl;
+}
+
+.btn {
+    margin-top: 10px;
+    border: none;
+    background-color: #fd1212;
+    width: 100%;
+    padding: 10px;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #fffefe;
+    border-radius: 20px;
+    transition: all .3s;
+}
+
+.btn:hover {
+    background-color: #fc7d7d;
+}
+
+.contain_notif {
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(30px);
+    color: white !important;
+    top: 38px !important;
+    left: -15px;
+}
+
+.notif_icon {
+    color: #fd1212;
+    font-size: 22px;
+}
+
+.title_notif {
+    color: #fd1212;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.notif {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_notif {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+}
+
+.text_notif {
+    font-size: 15px;
+}
+
+@media only screen and (max-width:768px) {
+    .contain {
+        height: 300px;
+        padding: 0 6px;
+        
+    }
+    .info {
+        width: 270px;
+        right: 0;
+    }
+    .title {
+        font-size: 14px;
+    }
+    .price {
+        font-size: 14px;
+    }
+    .img {
+        width: 200px;
+    }
+    .btn {
+        padding: 8px;
+        font-size: 11px;
+    }
+    .contain_notif {
+        width: 300px;
+    }
+    .img_notif {
+        width: 100px;
+        height: auto;
+        object-fit: contain;
+    }
+    .text_notif {
+        font-size: 11px;
+    }
+    .notif_icon {
+        font-size: 20px;
+    }
+    .title_notif {
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width:526px) {
+    .contain {
+      height: 200px;
+    }
+    .info {
+        width: 170px;
+        margin-right: 5px;
+    }
+    .title {
+        font-size: 11px;
+    }
+    .price {
+        font-size: 12px;
+        margin: 10px 0;
+    }
+    .img {
+        width: 100px;
+        
+    }
+    .btn {
+        padding: 3px;
+        font-size: 10px;
+        margin-top: 3px;
+    }
+    .contain_notif {
+        width: 200px;
+        padding: 11px 0 0 2px;
+    }
+    .notif {
+        width: 100px;
+    }
+    .img_notif {
+        width: 90px;
+        height: auto;
+        object-fit: contain;
+        align-items: center;
+    }
+    .text_notif {
+        font-size: 11px;
+    }
+    .notif_icon {
+        font-size: 17px;
+    }
+    .title_notif {
+        font-size: 11px;
+    }
 }

@@ -5,30 +5,48 @@
     max-width: 1500px;
     overflow: hidden;
 }
-.title_shop{
+
+.title_shop {
     color: #fff;
     margin: 20px 10px;
     font-size: 23px;
     font-weight: 700;
-
 }
+
+.hero {
+    display: flex;
+    justify-content: center;
+    margin-top: 10rem;
+}
+
 .text_hero {
     color: #fd1212;
     font-size: 90px;
-    white-space: nowrap;
-    width: 20em;
-    font-family:'Lobster', cursive,sans-serif;
-    overflow: hidden;
+    font-family: 'Lobster', cursive, sans-serif;
     text-align: center;
     font-weight: 700;
     text-shadow: 3px 3px 3px black;
-    animation: type 10s steps(1000, end);
+    animation-name: winking;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-iteration-count: infinite;
 }
-@keyframes type{ 
-    from { 
-         width: 0; 
-         } 
-     }
+
+@keyframes winking {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: 1;
+    }
+    1000% {
+        opacity: 0;
+    }
+}
+
 .container {
     width: 100%;
 }
@@ -37,32 +55,32 @@
     width: 100%;
     overflow: hidden;
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url('../images/ps5.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    background-origin: border-box;
+    background: #ff0084;
+    background: -webkit-linear-gradient(to right, #33001b, #ff0084);
+    background: linear-gradient(to right, #33001b, #ff0084);
 }
-@media only screen and (max-width:768px){
+
+@media only screen and (max-width:768px) {
     .text_hero {
         font-size: 60px;
     }
-    .title_shop{
+    .title_shop {
         font-size: 17px;
     }
-    .img{
+    .img {
         background-size: contain;
     }
+    .hero {
+        margin-top: 5rem;
+    }
 }
-@media only screen and (max-width:526px){
+
+@media only screen and (max-width:526px) {
     .text_hero {
         font-size: 40px;
+        text-shadow: 2px 2px 2px black;
     }
-    .title_shop{
+    .title_shop {
         font-size: 12px;
     }
 }

@@ -4,6 +4,7 @@ import { Row, Col } from "antd"
 import LatestProduct from '../LatesProduct'
 import { useTranslation } from "react-i18next";
 import { Helmet } from 'react-helmet'
+import MyCarousel from '../MyCarousel';
 
 function Home() {
     const {t} = useTranslation()
@@ -14,6 +15,7 @@ function Home() {
         </Helmet>
         <div className={styles.home}>
             <div className={styles.container}>
+                <MyCarousel/>
                 <div className={styles.img}>
                     <div className={styles.text_hero}>
                         {t("buy_enjoy")}

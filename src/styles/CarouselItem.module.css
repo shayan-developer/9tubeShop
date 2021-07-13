@@ -1,0 +1,23 @@
+.contain {
+    position: relative;
+    top: 0;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    padding: 0 10px;
+}
+
+.img {
+    position: absolute;
+    width: 400px;
+    height: auto;
+    object-fit: contain;
+}
+
+.info {
+    position: absolute;
+    color: #000;
+    font-size: 40px;
+    right: 0;
+}

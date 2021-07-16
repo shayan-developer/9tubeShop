@@ -12,7 +12,7 @@ function SortBy() {
                 <div className={styles.sort_text}>
                     {t("sort_by")}
                 </div>
-                <Select defaultValue="lucy" style={{ width: 200 }}>
+                <Select defaultValue="lucy" className={styles.select}>
                     <Option value="jack">{t("sort_by_opt1")}</Option>
                     <Option value="lucy">{t("sort_by_opt2")}</Option>
                     <Option value="disabled">

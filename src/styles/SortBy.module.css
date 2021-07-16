@@ -15,3 +15,22 @@
     font-size: 17px;
     font-weight: 600;
 }
+.select{
+    width: 300px !important;
+}
+@media only screen and (max-width:768px){
+.sort_text{
+    font-size: 15px;
+}
+.select{
+    width: 200px !important;
+}
+}
+@media only screen and (max-width:526px){
+    .sort_text{
+        font-size: 12px;
+    }
+    .select{
+        width: 100px !important;
+    }
+}

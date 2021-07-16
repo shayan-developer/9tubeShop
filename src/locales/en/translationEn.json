@@ -2,7 +2,7 @@
     "sign_in": "Sign in",
     "sign_out": "Sign out",
     "about_us": "About us",
-    "orders": "Orders",
+    "products": "Products",
     "buy_enjoy": "Buy And Enjoy !",
     "latest": "The latest products",
     "add_basket": "Add to basket",
@@ -37,5 +37,10 @@
     "home_delivery":"Home door delivery",
     "fast_send":"Fast sending",
     "guarantee":"Authenticity of the goods",
-    "easy":"Easy and safe shopping"
+    "easy":"Easy and safe shopping",
+    "sort_by":"Sort by",
+    "sort_by_opt1":"the most expensive",
+    "sort_by_opt2":"cheapest",
+    "sort_by_opt3":"the newest",
+    "sort_by_opt4":"The oldest"
 }

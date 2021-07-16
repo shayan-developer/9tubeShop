@@ -36,7 +36,7 @@ function CarouselItem({ img, title, price, id }) {
         <div className={styles.contain}>
             <img src={img} alt={title} className={styles.img} />
             <div
-                style={{ direction: lang === "fa" ? "rtl" : "ltr" }}
+                style={{ textAlign: lang === "fa" ? "right" : "left" }}
                 className={styles.info}>
                 <div className={styles.title}>{title} </div>
                 <div className={styles.price}>

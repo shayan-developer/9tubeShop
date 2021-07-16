@@ -43,10 +43,11 @@ export default function Menu() {
                             <span className={styles.lineTwo} >{user ? t("sign_out") : t("sign_in")} </span>
                         </div>
                     </Link>
-
-                    <div className={styles.options}>
-                        <span className={styles.lineTwo} > {t("orders")} </span>
-                    </div>
+                    <Link to="/products">
+                        <div className={styles.options}>
+                            <span className={styles.lineTwo} > {t("products")} </span>
+                        </div>
+                    </Link>
                     <Link to="/about">
                         <div className={styles.options}>
                             <span className={styles.lineTwo} > {t("about_us")} </span>

@@ -11,6 +11,7 @@ const Login = lazy(() => import("./components/Login"))
 const Register = lazy(() => import("./components/Register"))
 const Checkout = lazy(() => import("./components/Checkout"))
 const About = lazy(() => import("./components/About"))
+const ProductPage= lazy(() => import("./components/ProductPage"))
 function App() {
   const state = useStateValue()
   const dispath = state[1]
@@ -44,6 +45,11 @@ function App() {
           <Route exact path='/'>
             <Layout>
               <Home />
+            </Layout>
+          </Route>
+          <Route exact path='/products'>
+            <Layout>
+              <ProductPage />
             </Layout>
           </Route>
           <Route exact path='/about'>

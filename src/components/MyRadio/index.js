@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Radio } from "antd"
 import { useTranslation } from "react-i18next";
 import styles from "../../styles/Radio.module.css"
-function MyRadio() {
+function MyRadio({t1,t2,forlang}) {
     const { i18n } = useTranslation()
     const lang=i18n.language
     const [check, setcheck] = useState({ en: false, fa: false})
@@ -26,7 +26,7 @@ function MyRadio() {
         <Radio.Group
             defaultValue={lang}
             buttonStyle="solid"
-            onChange={changeLang}
+            onChange={forlang&&changeLang}
             size='small'
             className={styles.radio}
         >
@@ -38,7 +38,7 @@ function MyRadio() {
                     backgroundColor: check.en ? "#fd1212" : "#fff",
                     borderColor: check.en ? "#fd1212" : "#fff"
                 }}
-            >English</Radio.Button>
+            >{t2}</Radio.Button>
             <Radio.Button
                 value="fa"
                 checked={check}
@@ -47,7 +47,7 @@ function MyRadio() {
                     backgroundColor: check.fa ? "#fd1212" : "#fff",
                     borderColor: check.fa ? "#fd1212" : "#fff"
                 }}
-            >فارسی</Radio.Button>
+            >{t1}</Radio.Button>
         </Radio.Group>
     )
 }

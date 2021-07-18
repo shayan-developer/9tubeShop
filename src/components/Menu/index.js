@@ -58,7 +58,7 @@ export default function Menu() {
             </div>
 
             <div className={styles.icons}>
-                <MyRadio />
+                <MyRadio t1="فارسی " t2="English" forlang={true}/>
                 <Link to="/checkout">
                     <div className={styles.basket}>
                         <MdShoppingBasket className={styles.basketIcon} />

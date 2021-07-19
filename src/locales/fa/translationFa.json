@@ -42,5 +42,9 @@
     "sort_by_opt1":"گران ترین",
     "sort_by_opt2":"ارزان ترین ",
     "sort_by_opt3":"جدید ترین ",
-    "sort_by_opt4":"قدیمی ترین "
+    "sort_by_opt4":"قدیمی ترین ",
+    "filter_pr":"فیلتر محصولات",
+    "brand":"برند",
+    "price_range":"رنج قیمت",
+    "available_pr":"فقط محصولات موجود"
 }

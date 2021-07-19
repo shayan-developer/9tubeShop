@@ -9,10 +9,10 @@ import SortBy from '../SortBy'
 function ProductsPage() {
     return (
         <Row className={styles.row}>
-            <Col span={6}>
+            <Col xs={0} sm={0} md={0} lg={6} xl={6}>
                 <FilterProducts/>
             </Col>
-            <Col span={18}>
+            <Col xs={24} sm={24} md={24} lg={18} xl={18}>
             <SortBy />
                 <Row gutter={[6, 8]} >
                     {data.map((item, i) => {

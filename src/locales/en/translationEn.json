@@ -42,5 +42,9 @@
     "sort_by_opt1":"the most expensive",
     "sort_by_opt2":"cheapest",
     "sort_by_opt3":"the newest",
-    "sort_by_opt4":"The oldest"
+    "sort_by_opt4":"The oldest",
+    "filter_pr":"Filter products",
+    "brand":"Brand",
+    "price_range":"Price range",
+    "available_pr":"Only products available"
 }

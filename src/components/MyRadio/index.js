@@ -7,7 +7,6 @@ function MyRadio({t1,t2,forlang}) {
     const lang=i18n.language
     const [check, setcheck] = useState({ en: false, fa: false})
     const changeLang = (e) => {
-        console.log(e);
         i18n.changeLanguage(e.target.value)
         if (e.target.value === "en") {
             setcheck({ en: true })

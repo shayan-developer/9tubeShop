@@ -1,9 +1,10 @@
-import { Divider, Slider } from 'antd'
+import { Divider, Radio, Slider, Switch } from 'antd'
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { FaDollarSign, FaFilter, FaPlaystation, FaXbox } from 'react-icons/fa'
 import styles from "../../styles/FilterProducts.module.css"
-import MyRadio from "../MyRadio";
 function FilterProducts() {
+    const {t}= useTranslation()
     const marks = {
         0: {
             label: <span className={styles.label_price}>0</span>
@@ -25,18 +26,19 @@ function FilterProducts() {
     return (
         <div className={styles.filter}>
             <div className={styles.filter_txt}>
-                فیلتر محصولات
+                {t("filter_pr")}
                 <FaFilter />
             </div>
             <Divider style={{ backgroundColor: "#fd1212" }} />
             <div className={styles.filter_price}>
                 <div className={styles.filter_title}>
-                    رنج قیمت
+                   {t("price_range")}
                     <FaDollarSign />
                 </div>
                 <Slider
                     marks={marks}
                     range
+                    style={{ color: "#fd1212" }}
                     step={10}
                     defaultValue={[0, 5000000]}
                     onChange={onChange}
@@ -47,15 +49,18 @@ function FilterProducts() {
             </div>
             <div className={styles.filter_brand}>
                 <div className={styles.filter_title}>
-                    برند
+                   {t("brand")}
                 </div>
-                {/* <Radio.Group onChange={onChange} defaultValue="a">
+                <Radio.Group onChange={onChange}
+                    size={"large"}
+                    buttonStyle="solid"
+                    defaultValue="a">
                     <Radio.Button value="a"><FaPlaystation /></Radio.Button>
                     <Radio.Button value="b"><FaXbox /></Radio.Button>
-                    <Radio.Button value="c">Beijing</Radio.Button>
-                    <Radio.Button value="d">Chengdu</Radio.Button>
-                </Radio.Group> */}
-                <MyRadio t1={<FaPlaystation />} t2={<FaXbox />}/>
+                </Radio.Group>
+            </div>
+            <div className={styles.filter_exist}>
+                <div >{t("available_pr")}</div> <Switch defaultChecked />
             </div>
         </div>
     )

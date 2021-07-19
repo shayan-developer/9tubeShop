@@ -12,13 +12,13 @@ function SortBy() {
                 <div className={styles.sort_text}>
                     {t("sort_by")}
                 </div>
-                <Select defaultValue="lucy" className={styles.select}>
-                    <Option value="jack">{t("sort_by_opt1")}</Option>
-                    <Option value="lucy">{t("sort_by_opt2")}</Option>
-                    <Option value="disabled">
+                <Select defaultValue="c" className={styles.select}>
+                    <Option value="a">{t("sort_by_opt1")}</Option>
+                    <Option value="b">{t("sort_by_opt2")}</Option>
+                    <Option value="c">
                     {t("sort_by_opt3")}
                     </Option>
-                    <Option value="Yiminghe">{t("sort_by_opt4")}</Option>
+                    <Option value="d">{t("sort_by_opt4")}</Option>
                 </Select>
             </div>
             </Col>

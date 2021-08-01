@@ -16,7 +16,7 @@ function ProductsPage() {
             <SortBy />
                 <Row gutter={[6, 8]} >
                     {data.map((item, i) => {
-                        return <Col xs={12} sm={12} md={12} lg={8} xl={8} className={styles.col} key={i}>
+                        return <Col xs={12} sm={12} md={12} lg={12} xl={12} className={styles.col} key={i}>
                             <Product
                                 id={item.id}
                                 title={item.title}

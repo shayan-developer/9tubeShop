@@ -5,7 +5,7 @@ import { useTranslation } from "react-i18next";
 import { toman } from "../../lib/Totoman";
 function CheckoutProduct({ img, id, title, price }) {
     const state = useStateValue()
-    const dispath = state[1]
+    const [ , dispath]=state
     const { t, i18n } = useTranslation()
     const lang = i18n.language
     const removing = (e) => {

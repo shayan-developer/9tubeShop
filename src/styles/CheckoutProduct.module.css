@@ -3,7 +3,7 @@
     background-color: #fff;
     margin:18px 0 ;
     border-radius: 10px;
-    padding: 5px;
+    padding: 18px;
 }
 .img{
     width: 200px;
@@ -11,7 +11,7 @@
     object-fit: contain;
 }
 .info{
-    margin-left:30px ;
+    margin-right:30px ;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;

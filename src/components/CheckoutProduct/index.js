@@ -3,6 +3,7 @@ import styles from "../../styles/CheckoutProduct.module.css"
 import { useStateValue } from '../Context/StateProvider'
 import { useTranslation } from "react-i18next";
 import { toman } from "../../lib/Totoman";
+import Button from '../Button';
 function CheckoutProduct({ img, id, title, price }) {
     const state = useStateValue()
     const [ , dispath]=state
@@ -20,7 +21,7 @@ function CheckoutProduct({ img, id, title, price }) {
             <div className={styles.info}>
                 <p className={styles.title}>{title}</p>
                 <p className={styles.price}> {t("price")}: {lang==="fa"?toman(price):` $ ${price}`}</p>
-                <button className={styles.btn} onClick={removing}>{t("remove_basket")}</button>
+                <Button  onClick={removing}>{t("remove_basket")}</Button>
             </div>
         </div>
     )

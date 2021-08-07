@@ -7,7 +7,7 @@
     font-weight: 900;
     color: #fff;
     margin-top: -40px;
-    text-shadow: 3px 3px 5px black;
+    text-shadow: 3px 3px 5px #000012;
 }
 
 .titles {
@@ -28,9 +28,9 @@
 .title_2 {
     font-size: 70px;
     font-weight: 900;
-    color: #fd1212;
+    color: #FF0000;
     margin-top: -20px;
-    text-shadow: 3px 3px 5px black;
+    text-shadow: 3px 3px 5px #000012;
 }
 
 .text {

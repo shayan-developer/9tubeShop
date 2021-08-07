@@ -29,7 +29,7 @@ function FilterProducts() {
                 {t("filter_pr")}
                 <FaFilter />
             </div>
-            <Divider style={{ backgroundColor: "#fd1212" }} />
+            <Divider style={{ backgroundColor: "#FF0000" }} />
             <div className={styles.filter_price}>
                 <div className={styles.filter_title}>
                    {t("price_range")}
@@ -38,7 +38,7 @@ function FilterProducts() {
                 <Slider
                     marks={marks}
                     range
-                    style={{ color: "#fd1212" }}
+                    style={{ color: "#FF0000" }}
                     step={10}
                     defaultValue={[0, 5000000]}
                     onChange={onChange}

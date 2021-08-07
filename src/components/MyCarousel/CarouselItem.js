@@ -6,6 +6,7 @@ import { TiTick } from 'react-icons/ti';
 import { FaTimesCircle } from 'react-icons/fa';
 import { notification } from 'antd';
 import { useStateValue } from '../Context/StateProvider';
+import Button from '../Button';
 function CarouselItem({ img, title, price, id }) {
     const { t, i18n } = useTranslation();
     const openNotification = () => {
@@ -42,9 +43,9 @@ function CarouselItem({ img, title, price, id }) {
                 <div className={styles.price}>
                     {lang === "fa" ? toman(price) : ` $ ${price}`}
                 </div>
-                <button
+                <Button
                     onClick={addToBasket}
-                    className={styles.btn}>{t("add_basket")}</button>
+                >{t("add_basket")}</Button>
 
             </div>
         </div>

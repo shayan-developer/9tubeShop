@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import styles from "../../styles/Login.module.css"
 import { auth } from "../../firebase"
@@ -6,16 +6,19 @@ import { useTranslation } from "react-i18next";
 import { Col, Row } from 'antd';
 import { ConfigProvider } from 'antd';
 import { Helmet } from 'react-helmet'
+import Button from '../Button';
 
 function Login() {
     const { t, i18n } = useTranslation()
     const history = useHistory();
     const lang = i18n.language
     const [err, seterr] = useState('')
+    const emailRef = useRef()
+    const passwordRef = useRef()
     const login = (e) => {
         e.preventDefault();
-        const input_email = e.target[0].value
-        const input_password = e.target[1].value
+        const input_email = emailRef.current.value
+        const input_password = emailRef.current.value
         if (input_email && input_password) {
             auth.signInWithEmailAndPassword(input_email, input_password)
                 .then(auth => {
@@ -44,6 +47,7 @@ function Login() {
                             <p className={styles.label}> {t("email")} </p>
                             <input
                                 type="email"
+                                ref={emailRef}
                                 className={styles.input}
                                 placeholder={t("email_place")}
                                 required
@@ -52,16 +56,17 @@ function Login() {
                             <input
                                 type="password"
                                 className={styles.input}
+                                ref={passwordRef}
                                 placeholder={t("password_place")}
                                 required
                             />
                             <p className={styles.err}>
                                 {err}
                             </p>
-                            <button
+                            <Button
                                 type='submit'
                                 className={styles.btn}
-                            >{t("sign_in")}</button>
+                            >{t("sign_in")}</Button>
                         </form>
                         <p className={styles.text}>
                             {t("login_text")}

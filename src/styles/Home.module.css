@@ -18,12 +18,12 @@
 }
 
 .text_hero {
-    color: #fd1212;
+    color: #FF0000;
     font-size: 90px;
     font-family: 'Lobster', cursive, sans-serif;
     text-align: center;
     font-weight: 700;
-    text-shadow: 3px 3px 3px black;
+    text-shadow: 3px 3px 3px #000012;
     animation-name: winking;
     animation-duration: 3s;
     animation-timing-function: ease-in;
@@ -73,7 +73,7 @@
 @media only screen and (max-width:526px) {
     .text_hero {
         font-size: 40px;
-        text-shadow: 2px 2px 2px black;
+        text-shadow: 2px 2px 2px #000012;
     }
     .title_shop {
         font-size: 12px;

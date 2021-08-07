@@ -34,8 +34,8 @@ function MyRadio({t1,t2,forlang}) {
                 value="en"
                 checked={check}
                 style={{
-                    backgroundColor: check.en ? "#fd1212" : "#fff",
-                    borderColor: check.en ? "#fd1212" : "#fff"
+                    backgroundColor: check.en ? "#FF0000" : "#fff",
+                    borderColor: check.en ? "#FF0000" : "#fff"
                 }}
             >{t2}</Radio.Button>
             <Radio.Button
@@ -43,8 +43,8 @@ function MyRadio({t1,t2,forlang}) {
                 checked={check}
                 className={styles.btn}
                 style={{
-                    backgroundColor: check.fa ? "#fd1212" : "#fff",
-                    borderColor: check.fa ? "#fd1212" : "#fff"
+                    backgroundColor: check.fa ? "#FF0000" : "#fff",
+                    borderColor: check.fa ? "#FF0000" : "#fff"
                 }}
             >{t1}</Radio.Button>
         </Radio.Group>

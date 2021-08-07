@@ -5,12 +5,12 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    background-color: black;
+    background-color: #000012;
     align-items: center;
 }
 
 .login_container {
-    border: 3px dashed #fd1212;
+    border: 3px dashed #FF0000;
     padding: 25px;
     width: 50%;
     border-radius: 10px;
@@ -34,21 +34,21 @@
     width: 100%;
     outline: none;
     border: none;
-    background-color: black;
-    border-bottom: 1px solid #fd1212;
+    background-color: #000012;
+    border-bottom: 1px solid #FF0000;
     color: #fff;
     font-size: 15px;
 }
 
 .err {
-    color: #fd1212;
+    color: #FF0000;
     font-size: 15px;
     margin: 10px 0;
 }
 
 .sign {
     font-family: 'Lobster', cursive, sans-serif;
-    color: #fd1212;
+    color: #FF0000;
     font-size: 30px;
     font-weight: 800;
     text-align: center;
@@ -57,30 +57,14 @@
 
 .logo {
     font-family: 'Lobster', cursive, sans-serif;
-    color: #fd1212;
+    color: #FF0000;
     font-size: 60px;
     margin: 25px 0;
 }
 
-.btn {
-    border: 1px solid;
-    margin-top: 40px;
-    border: none;
-    background-image: linear-gradient(to right, #f87878, #ee1f1f, #f34141, #fd1212);
-    width: 100%;
-    padding: 10px;
-    font-size: 15px;
-    font-weight: 700;
-    cursor: pointer;
-    color: #fffefe;
-    border-radius: 20px;
-    transition: all .5s;
-    background-size: 300% 100%;
-}
 
-.btn:hover {
-    background-position: 100% 0;
-}
+
+
 
 @media only screen and (max-width:768px) {
     .login_container{
@@ -103,11 +87,6 @@
         margin-top: 15px;
         font-size: 13px;
     }
-    .btn{
-        padding: 8px;
-        font-size: 12px;
-        margin-top: 25px;
-    }
 }
 
 @media only screen and (max-width:526px) {
@@ -129,9 +108,5 @@
     .input{
         margin-top: 15px;
         font-size: 13px;
-    }
-    .btn{
-        padding: 8px;
-        font-size: 12px;
     }
 }

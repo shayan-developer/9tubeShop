@@ -25,7 +25,7 @@
 }
 
 .filter_title {
-    color: #fd1212;
+    color: #FF0000;
     font-size: 17px;
     font-weight: 600;
     margin-bottom: 15px;
@@ -46,7 +46,7 @@
 
 .filter_exist {
     width: 100%;
-    color: #fd1212;
+    color: #FF0000;
     display: flex;
     align-items: center;
     justify-content:space-between;

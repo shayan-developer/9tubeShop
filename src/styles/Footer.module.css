@@ -1,5 +1,5 @@
 .footer {
-    background-color: #fd1212;
+    background-color: #FF0000;
     width: 100%;
     padding: 5px;
     height: 100%;
@@ -95,7 +95,7 @@
     transition: .3s ease-in;
 }
 .icon:hover{
-    color: black;
+    color: #000012;
 }
 @media only screen and (max-width:768px) {
     .up_text {

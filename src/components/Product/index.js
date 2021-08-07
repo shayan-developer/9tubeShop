@@ -6,6 +6,7 @@ import { TiTick } from "react-icons/ti";
 import { FaTimesCircle } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import { toman } from "../../lib/Totoman";
+import Button from '../Button';
 function Product({ id, title, img, price }) {
     const { t ,i18n} = useTranslation()
     const state = useStateValue()
@@ -47,11 +48,11 @@ function Product({ id, title, img, price }) {
                 className={styles.img}
                 alt={title}
             />
-            <button className={styles.btn}
+            <Button 
                 onClick={addToBasket}
             >
                 {t("add_basket")}
-            </button>
+            </Button>
         </div>
     )
 }

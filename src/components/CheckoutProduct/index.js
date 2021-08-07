@@ -9,11 +9,6 @@ function CheckoutProduct({ img, id, title, price, amount }) {
     const [, dispath] = state
     const { t, i18n } = useTranslation()
     const lang = i18n.language
-    const removing = (e) => {
-        dispath({
-            type: "REMOVE", id
-        })
-    }
     const addToBasket = () => {
         dispath({
             type: "ADD",

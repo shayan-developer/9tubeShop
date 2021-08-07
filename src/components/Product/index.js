@@ -7,7 +7,7 @@ import { FaTimesCircle } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import { toman } from "../../lib/Totoman";
 import Button from '../Button';
-function Product({ id, title, img, price }) {
+function Product({ id, title, img, price,amount }) {
     const { t ,i18n} = useTranslation()
     const state = useStateValue()
     const lang= i18n.language
@@ -31,7 +31,7 @@ function Product({ id, title, img, price }) {
         dispath({
             type: "ADD",
             item: {
-                id, title, img, price
+                id, title, img, price,amount
             }
         })
     }
@@ -49,6 +49,7 @@ function Product({ id, title, img, price }) {
                 alt={title}
             />
             <Button 
+            style={{width:"100%"}}
                 onClick={addToBasket}
             >
                 {t("add_basket")}

@@ -9,10 +9,13 @@ import { useTranslation } from "react-i18next";
 import MyRadio from "../MyRadio"
 export default function Menu() {
     const { t } = useTranslation()
-    const state = useStateValue()
-    const { basket, user } = state[0]
+    const [state] = useStateValue()
+    const { basket, user } = state
+    console.log(basket);
     const [left, setleft] = useState(true)
-
+    const countBasket = basket.reduce((acc, cur) => {
+        return acc + cur.amount
+    }, 0)
     const navChange = () => {
         setleft(!left)
     }
@@ -29,8 +32,6 @@ export default function Menu() {
                     9TuBe
                 </div>
             </Link>
-
-
             <div className={styles.nav_menu} style={{ left: left ? "-100%" : "0" }}>
                 <div className={styles.search}>
                     <input className={styles.input} />
@@ -58,11 +59,11 @@ export default function Menu() {
             </div>
 
             <div className={styles.icons}>
-                <MyRadio t1="فارسی " t2="English" forlang={true}/>
+                <MyRadio t1="فارسی " t2="English" forlang={true} />
                 <Link to="/checkout">
                     <div className={styles.basket}>
                         <MdShoppingBasket className={styles.basketIcon} />
-                        <span className={styles.count}>{basket.length}</span>
+                        <span className={styles.count}>{countBasket}</span>
                     </div>
                 </Link>
                 <div className={styles.bar} onClick={navChange}>

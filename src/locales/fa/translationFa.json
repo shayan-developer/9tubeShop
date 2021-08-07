@@ -46,5 +46,6 @@
     "filter_pr":"فیلتر محصولات",
     "brand":"برند",
     "price_range":"رنج قیمت",
-    "available_pr":"فقط محصولات موجود"
+    "available_pr":"فقط محصولات موجود",
+    "amount":"تعداد"
 }

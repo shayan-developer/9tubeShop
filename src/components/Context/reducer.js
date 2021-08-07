@@ -1,6 +1,6 @@
 export const initialState = {
     basket: [],
-    user:null
+    user: null
 };
 
 export const calc = (basket) => (
@@ -10,31 +10,51 @@ export const calc = (basket) => (
 export const reducer = (state, action) => {
     switch (action.type) {
         case "ADD":
+            const find = state.basket.findIndex(item => item.id === action.item.id)
+            let findedItem = find >= 0 ? state.basket[find] : null
+            let array = [];
+            if (findedItem) {
+                let item = {
+                    ...action.item,
+                    amount: state.basket[find].amount + 1
+                }
+                array = [...state.basket]
+                array[find] = item
+            } else {
+                array = [...state.basket, action.item]
+            }
             return {
                 ...state,
-                basket: [...state.basket, action.item]
+                basket: array
             }
 
         case "REMOVE":
             const index = state.basket.findIndex(
-                (item) => item.id === action.id
+                (item) => item.id === action.item
             )
-            let newBasket = [...state.basket]
-            if (index >= 0) {
-                newBasket.splice(index, 1)
+            let findItem = state.basket[index]
+            let newBasket = []
+            if (findItem.amount === 1) {
+                let filter = state.basket.filter((item) => item.id !== action.item)
+                newBasket = [...filter]
             } else {
-                console.warn("can not remove item")
+                let item = {
+                    ...state.basket[index],
+                    amount: state.basket[index].amount - 1
+                }
+                newBasket = [...state.basket]
+                newBasket[index] = item
             }
             return {
                 ...state,
                 basket: newBasket
             }
 
-            case "SET_USER":
-                return{
-                    ...state,
-                    user:action.user
-                }
+        case "SET_USER":
+            return {
+                ...state,
+                user: action.user
+            }
 
         default:
             return state

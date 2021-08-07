@@ -13,6 +13,7 @@ function LatestProduct() {
                         title={item.title}
                         img={item.img}
                         price={item.price}
+                        amount={item.amount}
                     />
                 </Col>
             })}

@@ -7,7 +7,7 @@ import { FaTimesCircle } from 'react-icons/fa';
 import { notification } from 'antd';
 import { useStateValue } from '../Context/StateProvider';
 import Button from '../Button';
-function CarouselItem({ img, title, price, id }) {
+function CarouselItem({ img, title, price, id,amount }) {
     const { t, i18n } = useTranslation();
     const openNotification = () => {
         notification.info({
@@ -26,7 +26,7 @@ function CarouselItem({ img, title, price, id }) {
         dispath({
             type: "ADD",
             item: {
-                id, title, img, price
+                id, title, img, price,amount
             }
         })
     }

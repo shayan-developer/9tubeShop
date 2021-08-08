@@ -9,6 +9,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 6px;
     background-color: #000000;
     margin-top: 20px;
     cursor: pointer;

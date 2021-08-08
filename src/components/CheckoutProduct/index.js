@@ -29,8 +29,8 @@ function CheckoutProduct({ img, id, title, price, amount }) {
                 <p className={styles.price}> {t("price")} : {lang === "fa" ? toman(price) : ` $ ${price}`}</p>
                 <p className={styles.price}>{t("amount")} :  {amount} </p>
                 <div className={styles.actions}>
-                    <Button style={{ marginLeft: "8px", width: "60px" }} onClick={addToBasket}> + </Button>
-                    <Button style={{ marginLeft: "8px", width: "60px" }} onClick={minesBasket}> - </Button>
+                    <Button varient="outline" style={{ marginLeft: "8px", width: "60px" }} onClick={addToBasket}> + </Button>
+                    <Button varient="outline" style={{ marginLeft: "8px", width: "60px" }} onClick={minesBasket}> - </Button>
                 </div>
             </div>
         </div>

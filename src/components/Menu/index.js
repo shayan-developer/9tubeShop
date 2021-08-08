@@ -1,18 +1,19 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from "../../styles/Menu.module.css"
-import { MdSearch, MdShoppingBasket } from "react-icons/md";
+import { MdSearch, MdShoppingCart } from "react-icons/md";
 import { Link } from 'react-router-dom';
 import { useStateValue } from '../Context/StateProvider';
 import { auth } from '../../firebase';
 import { FaBars } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import MyRadio from "../MyRadio"
+import { Badge } from 'antd';
 export default function Menu() {
     const { t } = useTranslation()
     const [state] = useStateValue()
     const { basket, user } = state
-    console.log(basket);
     const [left, setleft] = useState(true)
+    const [btnIsHighlighted, setBtnIsHighlighted] = useState(false);
     const countBasket = basket.reduce((acc, cur) => {
         return acc + cur.amount
     }, 0)
@@ -25,6 +26,21 @@ export default function Menu() {
             auth.signOut()
         }
     }
+    useEffect(() => {
+        if (basket.length === 0) {
+            return;
+        }
+        setBtnIsHighlighted(true);
+
+        const timer = setTimeout(() => {
+            setBtnIsHighlighted(false);
+        }, 300);
+
+        return () => {
+            clearTimeout(timer);
+        };
+    }, [basket])
+    const basketStyle = `${styles.basket} ${btnIsHighlighted ? styles.bump : ''}`;
     return (
         <nav className={styles.menu}>
             <Link to="/">
@@ -61,9 +77,10 @@ export default function Menu() {
             <div className={styles.icons}>
                 <MyRadio t1="فارسی " t2="English" forlang={true} />
                 <Link to="/checkout">
-                    <div className={styles.basket}>
-                        <MdShoppingBasket className={styles.basketIcon} />
-                        <span className={styles.count}>{countBasket}</span>
+                    <div className={basketStyle}>
+                        <Badge count={countBasket}>
+                            <MdShoppingCart  className={styles.basketIcon} />
+                        </Badge>
                     </div>
                 </Link>
                 <div className={styles.bar} onClick={navChange}>

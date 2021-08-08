@@ -2,28 +2,51 @@
     margin-top: 5px;
     border: none;
     background-color: #FF0000;
-    padding: 10px;
+    padding: 8px;
+    width: 100%;
     font-size: 19px;
     font-weight: 700;
     cursor: pointer;
     color: #fffefe;
-    border-radius: 20px;
+    border-radius: 8px;
     transition: all .3s;
 }
-
+.btnOutline{
+    margin-top: 5px;
+    border: 2px solid #FF0000;
+    background-color: white;
+    width: 100%;
+    font-size: 19px;
+    font-weight: 700;
+    cursor: pointer;
+    color: #FF0000 ;
+    border-radius: 8px;
+    transition: all .3s;
+}
+.btnOutline:hover{
+    background-color: #FF0000;
+    color: white;
+}
 .btn:hover {
-    background-color: #fc7d7d;
+    background-color: #ff7777;
 }
 @media only screen and (max-width:768px) {
     .btn {
-        padding: 8px;
+        padding: 6px;
+        font-size: 11px;
+    }
+    .btnOutline {
+        padding: 2px;
         font-size: 11px;
     }
 }
 
 @media only screen and (max-width:526px) {
     .btn {
-        padding: 5px;
+        padding: 4px;
+        font-size: 11px;
+    }
+    .btnOutline{
         font-size: 11px;
     }
 }

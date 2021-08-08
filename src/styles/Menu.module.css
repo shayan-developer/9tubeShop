@@ -7,6 +7,7 @@
     position: sticky;
     top: 0;
     z-index: 100;
+    overflow: hidden;
 }
 
 .logo {
@@ -85,19 +86,24 @@
 }
 
 .count {
-    font-size: 17px;
+    font-size: 20px;
     font-weight: 800;
     margin: 0 10px;
 }
-
+.basketIcon{
+    font-size: 31px;
+    height: 100%;
+    color: #FF0000;
+}
 .basket {
     display: flex;
     align-items: center;
-    color: #FF0000;
-    font-size: 30px;
+    margin-right: 1rem;
     height: 100%;
 }
-
+.basket:hover .basketIcon{
+    color: #ff7777;
+}
 .bar {
     display: flex;
     align-items: center;
@@ -116,7 +122,26 @@
     color: #FF0000;
     cursor: pointer;
 }
-
+.bump {
+    animation: bump 300ms ease-out;
+  }
+@keyframes bump {
+    0% {
+      transform: scale(1);
+    }
+    10% {
+      transform: scale(0.9);
+    }
+    30% {
+      transform: scale(1.1);
+    }
+    50% {
+      transform: scale(1.15);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
 @media only screen and (max-width:768px) {
     .nav_menu {
         position: fixed;
@@ -142,6 +167,9 @@
     }
     .logo {
         font-size: 30px;
+    }
+    .basketIcon{
+        font-size: 25px;
     }
 }
 @media only screen and (max-width:500px) {

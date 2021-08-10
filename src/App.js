@@ -12,6 +12,7 @@ const About = lazy(() => import("./pages/About"))
 const ProductPage = lazy(() => import("./pages/ProductPage"))
 const NotFound = lazy(() => import("./pages/NotFound"))
 function App() {
+  //context
   const state = useStateValue()
   const [, dispath] = state
   useEffect(() => {
@@ -53,7 +54,6 @@ function App() {
           <Route path="/checkout">
             <Checkout />
           </Route>
-          // this is for 404 page
           <Route path="*">
             <NotFound />
           </Route>

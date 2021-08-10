@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import styles from "../../styles/Menu.module.css"
-import { MdSearch, MdShoppingCart } from "react-icons/md";
-import { Link } from 'react-router-dom';
+import { MdPerson, MdSearch, MdShoppingBasket, MdShoppingCart } from "react-icons/md";
+import { NavLink } from 'react-router-dom';
 import { useStateValue } from '../Context/StateProvider';
 import { auth } from '../../firebase';
 import { FaBars } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import MyRadio from "../MyRadio"
 import { Badge } from 'antd';
+import { IoHome, IoBook } from "react-icons/io5";
 export default function Menu() {
     const { t } = useTranslation()
     const [state] = useStateValue()
@@ -43,49 +44,53 @@ export default function Menu() {
     const basketStyle = `${styles.basket} ${btnIsHighlighted ? styles.bump : ''}`;
     return (
         <nav className={styles.menu}>
-            <Link to="/">
+            <NavLink to="/">
                 <div className={styles.logo}>
                     9TuBe
                 </div>
-            </Link>
-            <div className={styles.nav_menu} style={{ left: left ? "-100%" : "0" }}>
-                <div className={styles.search}>
-                    <input className={styles.input} />
-                    <MdSearch className={styles.searchIcon} />
-                </div>
-
-                <div className={styles.nav} >
-                    <Link to={!user && "/login"}>
-                        <div className={styles.options} onClick={authcheck}>
-                            <span className={styles.lineTwo} >{user ? t("sign_out") : t("sign_in")} </span>
-                        </div>
-                    </Link>
-                    <Link to="/products">
-                        <div className={styles.options}>
-                            <span className={styles.lineTwo} > {t("products")} </span>
-                        </div>
-                    </Link>
-                    <Link to="/about">
-                        <div className={styles.options}>
-                            <span className={styles.lineTwo} > {t("about_us")} </span>
-                        </div>
-                    </Link>
-                </div>
-
-            </div>
-
+            </NavLink>
             <div className={styles.icons}>
                 <MyRadio t1="فارسی " t2="English" forlang={true} />
-                <Link to="/checkout">
+                <NavLink to="checkout">
                     <div className={basketStyle}>
                         <Badge count={countBasket}>
-                            <MdShoppingCart  className={styles.basketIcon} />
+                            <MdShoppingCart className={styles.basketIcon} />
                         </Badge>
                     </div>
-                </Link>
+                </NavLink>
                 <div className={styles.bar} onClick={navChange}>
                     <FaBars className={styles.icon_bar} />
                 </div>
+            </div>
+            <div className={styles.nav_menu} style={{ left: left ? "-100%" : "0" }}>
+                <div className={styles.nav} >
+                    <NavLink to={!user && "login"} activeClassName={styles.active_item} className={styles.items}>
+                        <div className={styles.options} onClick={authcheck}>
+                            <MdPerson className={styles.items_icon} />
+                            <span className={styles.lineTwo} >{user ? t("sign_out") : t("sign_in")} </span>
+                        </div>
+                    </NavLink>
+                    <NavLink to="about" activeClassName={styles.active_item} className={styles.items}>
+                        <div className={styles.options}>
+                            <IoBook className={styles.items_icon} />
+
+                            <span className={styles.lineTwo} > {t("about_us")} </span>
+                        </div>
+                    </NavLink>
+                    <NavLink to="products" activeClassName={styles.active_item} className={styles.items}>
+                        <div className={styles.options}>
+                            <MdShoppingBasket className={styles.items_icon} />
+                            <span className={styles.lineTwo} > {t("products")} </span>
+                        </div>
+                    </NavLink>
+                    <NavLink exact={true} to={""} activeClassName={styles.active_item} className={styles.items}>
+                        <div className={styles.options}>
+                            <IoHome className={styles.items_icon} />
+                            <span className={styles.lineTwo} > {t("home")} </span>
+                        </div>
+                    </NavLink>
+                </div>
+
             </div>
         </nav>
     )

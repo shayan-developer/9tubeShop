@@ -5,7 +5,6 @@ import { auth } from "./firebase";
 import { useStateValue } from "./components/Context/StateProvider";
 
 import Spiner from "./components/Spiner";
-const Layout = lazy(() => import("./components/Layout"))
 const Home = lazy(() => import("./components/Home"))
 const Login = lazy(() => import("./components/Login"))
 const Register = lazy(() => import("./components/Register"))
@@ -43,24 +42,16 @@ function App() {
             <Register />
           </Route>
           <Route exact path='/'>
-            <Layout>
               <Home />
-            </Layout>
           </Route>
           <Route exact path='/products'>
-            <Layout>
               <ProductPage />
-            </Layout>
           </Route>
           <Route exact path='/about'>
-            <Layout>
               <About />
-            </Layout>
           </Route>
           <Route path="/checkout">
-            <Layout>
               <Checkout />
-            </Layout>
           </Route>
         </Suspense>
       </Switch>

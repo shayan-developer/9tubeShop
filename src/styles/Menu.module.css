@@ -11,7 +11,7 @@
 }
 
 .logo {
-    font-family: 'Lobster', cursive,sans-serif;
+    font-family: 'Lobster', cursive, sans-serif;
     color: #FF0000;
     font-size: 40px;
     display: flex;
@@ -21,47 +21,41 @@
     text-decoration: none;
 }
 
-.search {
-    display: flex;
-    flex: 1;
-    align-items: center;
-    border-radius: 24px !important;
-    overflow: hidden;
-}
-
-.input {
-    height: 30px;
-    padding: 10px;
-    border: none !important;
-    outline: none;
-    width: 100%;
-}
-
-.input:focus {
-    outline: none;
-}
-
-.searchIcon {
-    height: 30px ;
-    width: 40px;
-    font-size: 22px;
-    background-color: #FF0000;
-    color: rgb(255, 255, 255);
-    cursor: pointer;
-}
-
 .nav {
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
+    height: 100%;
+}
+
+.items {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: all .1s ease-in-out;
+}
+.items:hover{
+    border-bottom:4px solid  #FF0000;
+}
+.active_item{
+    background-color: #FF0000;
+    color: #ffffff;
+}
+
+.items_icon {
+    font-size: 22px;
+    margin-right: 2px;
 }
 
 .nav_menu {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
+    height: 100%;
     align-items: center;
     width: 100%;
 }
-.icons{
+
+.icons {
     display: flex;
     height: 100%;
     align-items: center;
@@ -69,20 +63,17 @@
 
 .options {
     display: flex;
-    flex-direction: column;
+    align-items: center;
     margin: 0 15px;
     color: rgb(255, 255, 255);
     transition: all .5s ease-in-out;
     cursor: pointer;
 }
 
-.options:hover {
-    color: #FF0000
-}
-
 .lineTwo {
-    font-size: 15px ;
-    font-weight:600;
+    font-size: 17px;
+    font-weight: 600;
+    margin-left:2px;
 }
 
 .count {
@@ -90,20 +81,24 @@
     font-weight: 800;
     margin: 0 10px;
 }
-.basketIcon{
+
+.basketIcon {
     font-size: 31px;
     height: 100%;
     color: #FF0000;
 }
+
 .basket {
     display: flex;
     align-items: center;
     margin-right: 1rem;
     height: 100%;
 }
-.basket:hover .basketIcon{
+
+.basket:hover .basketIcon {
     color: #ff7777;
 }
+
 .bar {
     display: flex;
     align-items: center;
@@ -113,35 +108,40 @@
     transition: all .5s ease-in-out;
     display: none;
 }
-.icon_bar{
+
+.icon_bar {
     display: flex;
     height: 100%;
     align-items: center;
 }
+
 .bar:hover {
     color: #FF0000;
     cursor: pointer;
 }
+
 .bump {
     animation: bump 300ms ease-out;
-  }
+}
+
 @keyframes bump {
     0% {
-      transform: scale(1);
+        transform: scale(1);
     }
     10% {
-      transform: scale(0.9);
+        transform: scale(0.9);
     }
     30% {
-      transform: scale(1.1);
+        transform: scale(1.1);
     }
     50% {
-      transform: scale(1.15);
+        transform: scale(1.15);
     }
     100% {
-      transform: scale(1);
+        transform: scale(1);
     }
-  }
+}
+
 @media only screen and (max-width:768px) {
     .nav_menu {
         position: fixed;
@@ -153,25 +153,33 @@
         width: 100%;
         border-radius: 10px;
         text-align: center;
-        transition: all 0.5s ;
+        transition: all 0.5s;
     }
-    .search{
+    .search {
         width: 90%;
     }
-    .nav{
+    .nav {
         width: 100%;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
         margin: 25px 0 !important;
     }
-    .bar{
+    .items{
+        width: 100%;
+        height: 50px;
+        justify-content: flex-end;
+    }
+    .bar {
         display: block;
     }
     .logo {
         font-size: 30px;
     }
-    .basketIcon{
+    .basketIcon {
         font-size: 25px;
     }
 }
+
 @media only screen and (max-width:500px) {
     .nav_menu {
         position: fixed;
@@ -182,32 +190,32 @@
         width: 100%;
         border-radius: 10px;
         text-align: center;
-        transition: all 0.5s ;
+        transition: all 0.5s;
     }
-    .search{
+    .search {
         width: 90%;
     }
-    .nav{
+    .nav {
         width: 100%;
         margin: 25px 0 !important;
     }
-    .lineOne{
-        font-size: 10px ;
+    .lineOne {
+        font-size: 10px;
     }
-    .lineTwo{
-        font-size: 12px ;
+    .lineTwo {
+        font-size: 12px;
     }
-    .basket{
+    .basket {
         font-size: 20px;
         margin-right: .5rem;
     }
-    .input{
+    .input {
         height: 7px;
     }
-    .searchIcon{
+    .searchIcon {
         height: 21px;
     }
-    .bar{
+    .bar {
         display: block;
         font-size: 20px;
     }

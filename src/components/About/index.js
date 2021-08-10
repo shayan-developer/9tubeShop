@@ -4,10 +4,11 @@ import styles from "../../styles/About.module.css"
 import img from "../../images/god.jpg"
 import { useTranslation } from "react-i18next";
 import { Helmet } from 'react-helmet';
+import Layout from "../Layout"
 function About() {
     const { t } = useTranslation();
     return (
-        <>
+        <Layout>
             <Helmet>
                 <title> {`${t("about")} ${t("us")}`} </title>
             </Helmet>
@@ -31,7 +32,7 @@ function About() {
 
                 </Col>
             </Row>
-        </>
+        </Layout>
     )
 }
 

@@ -7,12 +7,13 @@ import CheckoutProduct from "../CheckoutProduct"
 import { MdSentimentDissatisfied } from "react-icons/md";
 import { useTranslation } from "react-i18next";
 import { Helmet } from 'react-helmet'
+import Layout from "../Layout"
 function Checkout() {
     const state = useStateValue()
     const { basket } = state[0]
     const { t } = useTranslation()
     return (
-    <>
+    <Layout>
         <Helmet>
             <title> {t("shopping_bas")} </title>
         </Helmet>
@@ -35,7 +36,7 @@ function Checkout() {
                 }
             </Col>
         </Row>
-    </>
+    </Layout>
     )
 }
 

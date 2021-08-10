@@ -6,11 +6,13 @@ import { useTranslation } from "react-i18next";
 import { Helmet } from 'react-helmet'
 import MyCarousel from '../MyCarousel';
 import Intro from '../Intro';
+import Layout from '../Layout';
+
 
 function Home() {
     const { t } = useTranslation()
     return (
-        <>
+        <Layout>
             <Helmet>
                 <title> {t("home")} </title>
             </Helmet>
@@ -34,7 +36,7 @@ function Home() {
                     <LatestProduct />
                 </div>
             </div>
-        </>
+        </Layout>
     )
 }
 

@@ -3,17 +3,17 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import React, { useEffect, lazy, Suspense } from "react"
 import { auth } from "./firebase";
 import { useStateValue } from "./components/Context/StateProvider";
-
 import Spiner from "./components/Spiner";
-const Home = lazy(() => import("./components/Home"))
-const Login = lazy(() => import("./components/Login"))
-const Register = lazy(() => import("./components/Register"))
-const Checkout = lazy(() => import("./components/Checkout"))
-const About = lazy(() => import("./components/About"))
-const ProductPage= lazy(() => import("./components/ProductPage"))
+const Home = lazy(() => import("./pages/Home"))
+const Login = lazy(() => import("./pages/Login"))
+const Register = lazy(() => import("./pages/Register"))
+const Checkout = lazy(() => import("./pages/Checkout"))
+const About = lazy(() => import("./pages/About"))
+const ProductPage = lazy(() => import("./pages/ProductPage"))
+const NotFound = lazy(() => import("./pages/NotFound"))
 function App() {
   const state = useStateValue()
-  const dispath = state[1]
+  const [, dispath] = state
   useEffect(() => {
     auth.onAuthStateChanged(user => {
       if (user) {
@@ -33,28 +33,31 @@ function App() {
   }, [dispath])
   return (
     <Router>
-      <Switch>
-        <Suspense fallback={<Spiner />}>
+      <Suspense fallback={<Spiner />}>
+        <Switch>
           <Route path="/login">
             <Login />
           </Route>
           <Route path="/register">
             <Register />
           </Route>
-          <Route exact path='/'>
-              <Home />
+          <Route exact path='/' exact>
+            <Home />
           </Route>
           <Route exact path='/products'>
-              <ProductPage />
+            <ProductPage />
           </Route>
           <Route exact path='/about'>
-              <About />
+            <About />
           </Route>
           <Route path="/checkout">
-              <Checkout />
+            <Checkout />
           </Route>
-        </Suspense>
-      </Switch>
+          <Route path="*">
+            <NotFound />
+          </Route>
+        </Switch>
+      </Suspense>
     </Router>
   );
 }

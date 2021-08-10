@@ -47,5 +47,6 @@
     "brand":"Brand",
     "price_range":"Price range",
     "available_pr":"Only products available",
-    "amount":"Amount"
+    "amount":"Amount",
+    "notFound":"Page Not Found"
 }

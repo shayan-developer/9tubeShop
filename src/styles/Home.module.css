@@ -52,9 +52,6 @@
 .img {
     width: 100%;
     overflow: hidden;
-    background: #ff0084;
-    background: -webkit-linear-gradient(to right, #33001b, #ff0084);
-    background: linear-gradient(to right, #33001b, #ff0084);
 }
 
 @media only screen and (max-width:768px) {

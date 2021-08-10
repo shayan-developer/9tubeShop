@@ -1,12 +1,12 @@
 import React from 'react'
 import styles from "../../styles/Home.module.css"
 import { Row, Col } from "antd"
-import LatestProduct from '../LatesProduct'
+import LatestProduct from '../../components/LatesProduct'
 import { useTranslation } from "react-i18next";
 import { Helmet } from 'react-helmet'
-import MyCarousel from '../MyCarousel';
-import Intro from '../Intro';
-import Layout from '../Layout';
+import MyCarousel from '../../components/MyCarousel';
+import Intro from '../../components/Intro';
+import Layout from '../../components/Layout';
 
 
 function Home() {

@@ -4,7 +4,7 @@ import styles from "../../styles/About.module.css"
 import img from "../../images/god.jpg"
 import { useTranslation } from "react-i18next";
 import { Helmet } from 'react-helmet';
-import Layout from "../Layout"
+import Layout from "../../components/Layout"
 function About() {
     const { t } = useTranslation();
     return (

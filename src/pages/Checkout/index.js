@@ -1,13 +1,13 @@
 import React from 'react'
 import styles from "../../styles/Checkout.module.css"
-import { useStateValue } from '../Context/StateProvider'
-import Subtotal from '../Subtotal'
+import { useStateValue } from '../../components/Context/StateProvider'
+import Subtotal from '../../components/Subtotal'
 import { Row, Col } from 'antd'
-import CheckoutProduct from "../CheckoutProduct"
+import CheckoutProduct from "../../components/CheckoutProduct"
 import { MdSentimentDissatisfied } from "react-icons/md";
 import { useTranslation } from "react-i18next";
 import { Helmet } from 'react-helmet'
-import Layout from "../Layout"
+import Layout from "../../components/Layout"
 function Checkout() {
     const state = useStateValue()
     const { basket } = state[0]

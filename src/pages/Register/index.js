@@ -6,7 +6,7 @@ import { useTranslation } from "react-i18next";
 import { Col, Row } from 'antd';
 import { ConfigProvider } from 'antd';
 import { Helmet } from 'react-helmet'
-import Button from '../Button';
+import Button from '../../components/Button';
 
 function Register() {
     const { t, i18n } = useTranslation()

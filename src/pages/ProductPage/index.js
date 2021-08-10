@@ -1,11 +1,11 @@
 import { Col, Row } from 'antd'
-import Layout from "../Layout"
+import Layout from "../../components/Layout"
 import React from 'react'
 import { data } from '../../lib/data'
 import styles from "../../styles/ProductPage.module.css"
-import FilterProducts from '../FilterProducts'
-import Product from '../Product'
-import SortBy from '../SortBy'
+import FilterProducts from '../../components/FilterProducts'
+import Product from '../../components/Product'
+import SortBy from '../../components/SortBy'
 
 function ProductsPage() {
     return (

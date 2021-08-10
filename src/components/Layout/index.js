@@ -7,7 +7,7 @@ function Layout({ children }) {
     const { i18n } = useTranslation()
     const lang = i18n.language
     return (
-        <div style={{ backgroundColor: "#000012" }}>
+        <div>
             <Menu />
             <ConfigProvider direction={lang==="fa"?"rtl":"ltr"}>
                 {children}

@@ -11,9 +11,11 @@
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
+  background-color: #2C2E43 !important;
   -moz-osx-font-smoothing: grayscale;
 }
 a{
-  text-decoration: none
+  text-decoration: none;
+  
 }
 

@@ -53,6 +53,7 @@ function App() {
           <Route path="/checkout">
             <Checkout />
           </Route>
+          // this is for 404 page
           <Route path="*">
             <NotFound />
           </Route>

@@ -41,7 +41,7 @@ function App() {
           <Route path="/register">
             <Register />
           </Route>
-          <Route exact path='/' exact>
+          <Route path='/' exact >
             <Home />
           </Route>
           <Route exact path='/products'>

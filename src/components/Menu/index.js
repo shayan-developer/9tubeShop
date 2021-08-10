@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import styles from "../../styles/Menu.module.css"
-import { MdPerson, MdSearch, MdShoppingBasket, MdShoppingCart } from "react-icons/md";
+import { MdPerson, MdShoppingBasket, MdShoppingCart } from "react-icons/md";
 import { NavLink } from 'react-router-dom';
 import { useStateValue } from '../Context/StateProvider';
 import { auth } from '../../firebase';

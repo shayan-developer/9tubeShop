@@ -4,7 +4,8 @@ import { useStateValue } from '../Context/StateProvider'
 import { useTranslation } from "react-i18next";
 import { toman } from "../../lib/Totoman";
 import Button from '../Button';
-function CheckoutProduct({ img, id, title, price, amount }) {
+function CheckoutProduct(props) {
+    const { img, id, title, price, amount }=props
     const state = useStateValue()
     const [, dispath] = state
     const { t, i18n } = useTranslation()

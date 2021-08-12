@@ -3,11 +3,11 @@ import Product from '../Product'
 import { Row, Col } from "antd"
 import styles from "../../styles/Latest.module.css"
 import {data} from "../../lib/data"
-function LatestProduct() {
+const LatestProduct=() =>{
     return (
         <Row gutter={[6, 8]} className={styles.row}>
-            {data.map((item, i) => {
-               return <Col xs={12} sm={12} md={12} lg={8} xl={8} className={styles.col} key={i}>
+            {data.map(item => {
+               return <Col xs={12} sm={12} md={12} lg={8} xl={8} className={styles.col} key={item.id}>
                     <Product
                         id={item.id}
                         title={item.title}
@@ -21,4 +21,4 @@ function LatestProduct() {
     )
 }
 
-export default LatestProduct
+export default React.memo(LatestProduct)

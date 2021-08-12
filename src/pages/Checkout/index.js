@@ -26,7 +26,10 @@ function Checkout() {
                     <p className={styles.title}>{t("your_basket")} </p>
                 </div>
                 {
-                    basket.length >= 1 ? basket.map((item, i) => <CheckoutProduct {...item} key={i} />) :
+                    basket.length >= 1 ? basket.map(item => {
+                        const { img, id, title, price, amount }=item
+                  return  <CheckoutProduct img={img} price={price} id={id} amount={amount} title={title} key={id} />
+                }) :
                         <div className={styles.empty}>
                             <div className={styles.icon}>
                                 <MdSentimentDissatisfied />

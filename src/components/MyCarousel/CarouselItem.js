@@ -7,8 +7,11 @@ import { FaTimesCircle } from 'react-icons/fa';
 import { notification } from 'antd';
 import { useStateValue } from '../Context/StateProvider';
 import Button from '../Button';
-function CarouselItem({ img, title, price, id,amount }) {
+const CarouselItem=({ img, title, price, id,amount }) =>{
     const { t, i18n } = useTranslation();
+    const state = useStateValue()
+    const lang= i18n.language
+    const [,dispath] = state
     const openNotification = () => {
         notification.info({
             message: <p className={styles.title_notif}>{t("added_basket")}</p>,
@@ -21,7 +24,7 @@ function CarouselItem({ img, title, price, id,amount }) {
             className: styles.contain_notif,
         });
     };
-    const addToBasket = () => {
+    const addToBasket =() => {
         openNotification()
         dispath({
             type: "ADD",
@@ -30,9 +33,7 @@ function CarouselItem({ img, title, price, id,amount }) {
             }
         })
     }
-    const state = useStateValue()
-    const lang= i18n.language
-    const dispath = state[1]
+    
     return (
         <div className={styles.contain}>
             <img src={img} alt={title} className={styles.img} />
@@ -52,4 +53,4 @@ function CarouselItem({ img, title, price, id,amount }) {
     )
 }
 
-export default CarouselItem
+export default React.memo(CarouselItem) 

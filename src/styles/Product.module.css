@@ -23,8 +23,7 @@
     margin-bottom: 10px;
 }
 .contain_notif {
-    background-color: rgba(0, 0, 0,0.7);
-    backdrop-filter: blur(30px);
+    background-color:#2C2E43 ;
     color: white !important;
     top:38px !important;
     left: -15px;

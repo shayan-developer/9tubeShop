@@ -7,12 +7,11 @@ import { FaTimesCircle } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import { toman } from "../../lib/Totoman";
 import Button from '../Button';
-function Product({ id, title, img, price,amount }) {
-    const { t ,i18n} = useTranslation()
+const Product = ({ id, title, img, price, amount }) => {
+    const { t, i18n } = useTranslation()
     const state = useStateValue()
-    const lang= i18n.language
-    const dispath = state[1]
-
+    const lang = i18n.language
+    const [, dispath] = state
     const openNotification = () => {
         notification.info({
             message: <p className={styles.title_notif}>{t("added_basket")}</p>,
@@ -31,25 +30,25 @@ function Product({ id, title, img, price,amount }) {
         dispath({
             type: "ADD",
             item: {
-                id, title, img, price,amount
+                id, title, img, price, amount
             }
         })
     }
     return (
         <div className={styles.product}>
             <div className={styles.info}>
-                <div className={styles.title}>{t("product_name")}</div> 
+                <div className={styles.title}>{t("product_name")}</div>
                 <div > {title}</div>
                 <div className={styles.price}> {t("price")}</div>
-                <div >{lang==="fa"?toman(price):` $ ${price}`} </div>
+                <div >{lang === "fa" ? toman(price) : ` $ ${price}`} </div>
             </div>
             <img
                 src={img}
                 className={styles.img}
                 alt={title}
             />
-            <Button 
-            style={{width:"100%"}}
+            <Button
+                style={{ width: "100%" }}
                 onClick={addToBasket}
             >
                 {t("add_basket")}
@@ -58,4 +57,4 @@ function Product({ id, title, img, price,amount }) {
     )
 }
 
-export default Product
+export default React.memo(Product)

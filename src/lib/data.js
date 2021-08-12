@@ -36,14 +36,14 @@ export const data = [
         price: 69
     },
     {
-        id: "6234567",
+        id: "4234567",
         title: "The PS5™ console ",
         img: Console,
         amount:1,
         price: 916
     },
     {
-        id: "6234567",
+        id: "5234567",
         title: "HD Camera for PS5 consoles ",
         img: camera,
         amount:1,
@@ -57,42 +57,42 @@ export const data = [
         price: 29
     },
     {
-        id: "6234567",
+        id: "7234567",
         title: "Ghost of tsushima",
         img: ghost,
         amount:1,
         price: 69
     },
     {
-        id: "6234567",
+        id: "8234567",
         title: "Destruction AllStars - PS5",
         img: allStar,
         amount:1,
         price: 19
     },
     {
-        id: "6234567",
+        id: "9234567",
         title: "Returnal - PS5 ",
         img: returnal,
         amount:1,
         price: 59
     },
     {
-        id: "6234567",
+        id: "0234567",
         title: "Ratchet & Clank: Rift Apart Launch",
         img: ratchet,
         amount:1,
         price: 69
     },
     {
-        id: "4234567",
+        id: "0034567",
         title: "MLB The Show 21 - PS5",
         img: mlb,
         amount:1,
         price: 69
     },
     {
-        id: "5234567",
+        id: "0134567",
         title: "Marvel's Spider-Man",
         img: spider,
         amount:1,

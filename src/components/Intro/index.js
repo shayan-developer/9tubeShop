@@ -3,7 +3,7 @@ import React from 'react'
 import styles from "../../styles/Intro.module.css"
 import { useTranslation } from "react-i18next";
 import { FaShoppingCart,FaShippingFast, FaLaughWink, FaWarehouse } from "react-icons/fa";
-function Intro() {
+const  Intro=() =>{
     const { t } = useTranslation()
     return (
         <Row gutter={10} className={styles.row}>
@@ -54,4 +54,4 @@ function Intro() {
     )
 }
 
-export default Intro
+export default React.memo(Intro)

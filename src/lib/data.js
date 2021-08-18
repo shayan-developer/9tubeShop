@@ -19,7 +19,7 @@ export const data = [
         title: "DualSense™ Wireless Controller",
         img: redDaul,
         amount:1,
-        price: 110
+        price: 110,
     },
     {
         id: "2234567",
@@ -33,7 +33,11 @@ export const data = [
         title: "DualSense™ Wireless Controller",
         img: whitedual,
         amount:1,
-        price: 69
+        price: 69,
+        brand:'sony',
+        thumbnail:{
+            1:'https://www.lioncomputer.com/uploads/image/2021/2/thumbnail/1614462667-9SlKNROqIR6sbZ64.jpg'
+        }
     },
     {
         id: "4234567",

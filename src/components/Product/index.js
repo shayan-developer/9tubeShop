@@ -1,38 +1,15 @@
 import React from 'react'
-import { notification } from 'antd';
 import styles from "../../styles/Product.module.css"
-import { useStateValue } from "../Context/StateProvider";
-import { TiTick } from "react-icons/ti";
-import { FaTimesCircle } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import { toman } from "../../lib/Totoman";
 import Button from '../Button';
+import { useHistory} from 'react-router';
 const Product = ({ id, title, img, price, amount }) => {
     const { t, i18n } = useTranslation()
-    const state = useStateValue()
     const lang = i18n.language
-    const [, dispath] = state
-    const openNotification = () => {
-        notification.info({
-            message: <p className={styles.title_notif}>{t("added_basket")}</p>,
-            description: <div className={styles.notif}>
-                <img src={img} alt={title} className={styles.img_notif} />
-                <div className={styles.text_notif}>{title}</div>
-            </div>,
-            icon: <TiTick className={styles.notif_icon} />,
-            closeIcon: <FaTimesCircle className={styles.notif_icon} />,
-            className: styles.contain_notif,
-        });
-    };
-
+    const history = useHistory()
     const addToBasket = () => {
-        openNotification()
-        dispath({
-            type: "ADD",
-            item: {
-                id, title, img, price, amount
-            }
-        })
+        history.push(`/products/${id}`)
     }
     return (
         <div className={styles.product}>
@@ -51,7 +28,7 @@ const Product = ({ id, title, img, price, amount }) => {
                 style={{ width: "100%" }}
                 onClick={addToBasket}
             >
-                {t("add_basket")}
+                {t("view_product")}
             </Button>
         </div>
     )

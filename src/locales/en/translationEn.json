@@ -48,5 +48,7 @@
     "price_range":"Price range",
     "available_pr":"Only products available",
     "amount":"Amount",
-    "notFound":"Page Not Found"
+    "notFound":"Page Not Found",
+    "view_product":"View product",
+    "color":"Color"
 }

@@ -5,6 +5,7 @@ import { auth } from "./firebase";
 import { useStateValue } from "./components/Context/StateProvider";
 import Spiner from "./components/Spiner";
 import { asciLogo } from "./lib/asciLogo";
+import DetailProduct from "./pages/DeatailProduct";
 const Home = lazy(() => import("./pages/Home"))
 const Login = lazy(() => import("./pages/Login"))
 const Register = lazy(() => import("./pages/Register"))
@@ -55,6 +56,9 @@ function App() {
           </Route>
           <Route path="/checkout">
             <Checkout />
+          </Route>
+          <Route path="/products/:id">
+                  <DetailProduct/>
           </Route>
           <Route path="*">
             <NotFound />

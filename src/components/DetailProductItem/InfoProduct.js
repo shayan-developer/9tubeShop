@@ -3,35 +3,36 @@ import { useTranslation } from 'react-i18next'
 import { toman } from '../../lib/Totoman'
 import styles from "../../styles/InfoProduct.module.css"
 import Button from '../Button'
-import {MdShoppingCart } from "react-icons/md";
-function InfoProduct({ title, brand, color, price, id }) {
-    const { t ,i18n} = useTranslation()
+import { MdShoppingCart } from "react-icons/md";
+import { FaPlaystation } from "react-icons/fa";
+function InfoProduct({ title, brand, color, price, id ,addToBasket}) {
+    const { t, i18n } = useTranslation()
     const lang = i18n.language
-    const addBasket = () => {
-        console.log('added');
-    }
+    const border = lang === 'fa' ? styles['right_border'] : styles['left_border']
     return (
         <div className={styles.box}>
             <div className={styles.detail}>
                 <div className={styles.line}>
                     <span className={styles.title}>{t("product_name")}</span>
-                    <span>{title}</span>
+                    <span className={styles.value}>{title}</span>
                 </div>
                 <div className={styles.line}>
                     <span className={styles.title}>{t("brand")}</span>
-                    <span>{brand}</span>
+                    <span className={styles.brand}>{brand === 'sony' && <FaPlaystation />}</span>
                 </div>
                 <div className={styles.line}>
                     <span className={styles.title}>{t("color")}</span>
-                    <span>{color}</span>
+                    <span className={styles.color}></span>
                 </div>
             </div>
             <div className={styles.detail}>
-                <div className={styles.line}>
+                <div className={styles.line} >
                     <span className={styles.title}>{t("price")}</span>
-                    <span> {lang === "fa" ? toman(price) : ` $ ${price}`}</span>
+                    <span className={styles.price}> {lang === "fa" ? toman(price) : ` $ ${price}`}</span>
                 </div>
-                <Button onClick={addBasket}>{t("add_basket")} {<MdShoppingCart/>} </Button>
+                <Button style={{ display: "flex", alignItems: "center" }} onClick={addToBasket}>
+                    {t("add_basket")}{<MdShoppingCart className={`${styles.icon} ${border}`} />}
+                </Button>
             </div>
         </div>
     )

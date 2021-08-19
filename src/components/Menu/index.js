@@ -51,7 +51,7 @@ export default function Menu() {
             </NavLink>
             <div className={styles.icons}>
                 <MyRadio t1="فارسی " t2="English" forlang={true} />
-                <NavLink to="checkout">
+                <NavLink to="/checkout">
                     <div className={basketStyle}>
                         <Badge count={countBasket}>
                             <MdShoppingCart className={styles.basketIcon} />
@@ -64,20 +64,20 @@ export default function Menu() {
             </div>
             <div className={styles.nav_menu} style={{ left: left ? "-100%" : "0" }}>
                 <div className={styles.nav} >
-                    <NavLink to={!user && "login"} activeClassName={styles.active_item} className={styles.items}>
+                    <NavLink to={!user && "/login"} activeClassName={styles.active_item} className={styles.items}>
                         <div className={styles.options} onClick={authcheck}>
                             <MdPerson className={styles.items_icon} />
                             <span className={styles.lineTwo} >{user ? t("sign_out") : t("sign_in")} </span>
                         </div>
                     </NavLink>
-                    <NavLink to="about" activeClassName={styles.active_item} className={styles.items}>
+                    <NavLink to="/about" activeClassName={styles.active_item} className={styles.items}>
                         <div className={styles.options}>
                             <IoBook className={styles.items_icon} />
 
                             <span className={styles.lineTwo} > {t("about_us")} </span>
                         </div>
                     </NavLink>
-                    <NavLink to="products" activeClassName={styles.active_item} className={styles.items}>
+                    <NavLink to="/products" activeClassName={styles.active_item} className={styles.items}>
                         <div className={styles.options}>
                             <MdShoppingBasket className={styles.items_icon} />
                             <span className={styles.lineTwo} > {t("products")} </span>

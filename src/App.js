@@ -5,7 +5,6 @@ import { auth } from "./firebase";
 import { useStateValue } from "./components/Context/StateProvider";
 import Spiner from "./components/Spiner";
 import { asciLogo } from "./lib/asciLogo";
-import DetailProduct from "./pages/DeatailProduct";
 const Home = lazy(() => import("./pages/Home"))
 const Login = lazy(() => import("./pages/Login"))
 const Register = lazy(() => import("./pages/Register"))
@@ -13,6 +12,7 @@ const Checkout = lazy(() => import("./pages/Checkout"))
 const About = lazy(() => import("./pages/About"))
 const ProductPage = lazy(() => import("./pages/ProductPage"))
 const NotFound = lazy(() => import("./pages/NotFound"))
+const DetailProduct= lazy(() => import("./pages/DeatailProduct"))
 console.log(`%c${asciLogo}`,"color:#FF0000");
 function App() {
   //context

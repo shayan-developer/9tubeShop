@@ -10,7 +10,6 @@ function Detail() {
                 <img src={img} alt={title} className={styles.img_notif} />
                 <div className={styles.text_notif}>{title}</div>
             </div>,
-            icon: <TiTick className={styles.notif_icon} />,
             closeIcon: <FaTimesCircle className={styles.notif_icon} />,
             className: styles.contain_notif,
         });

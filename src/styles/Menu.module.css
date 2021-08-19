@@ -36,7 +36,6 @@
     transition: all .1s ease-in-out;
 }
 .items:hover{
-    border-bottom:4px solid  #FF0000;
     opacity: 1;
 }
 .active_item{

@@ -50,5 +50,9 @@
     "amount":"Amount",
     "notFound":"Page Not Found",
     "view_product":"View product",
-    "color":"Color"
+    "color":"Color",
+    "comments":"Comments",
+    "review":"Review",
+    "no_data":"No data found",
+    "no_comment":"There are no comments"
 }

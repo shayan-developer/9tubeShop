@@ -11,7 +11,7 @@ const LatestProduct=() =>{
                     <Product
                         id={item.id}
                         title={item.title}
-                        img={item.img}
+                        img={item.img['1'].large}
                         price={item.price}
                         amount={item.amount}
                     />

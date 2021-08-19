@@ -11,7 +11,8 @@
     border-radius: 8px;
     transition: all .3s;
 }
-.btnOutline{
+
+.btnOutline {
     margin-top: 5px;
     border: 2px solid #FF0000;
     background-color: white;
@@ -19,21 +20,25 @@
     font-size: 19px;
     font-weight: 700;
     cursor: pointer;
-    color: #FF0000 ;
+    color: #FF0000;
     border-radius: 8px;
     transition: all .3s;
 }
-.btnOutline:hover{
+
+.btnOutline:hover {
     background-color: #FF0000;
     color: white;
 }
+
 .btn:hover {
     background-color: #ff7777;
 }
+
 @media only screen and (max-width:768px) {
     .btn {
         padding: 6px;
         font-size: 11px;
+        border-radius: 6px;
     }
     .btnOutline {
         padding: 2px;
@@ -45,8 +50,9 @@
     .btn {
         padding: 4px;
         font-size: 11px;
+        border-radius: 4px;
     }
-    .btnOutline{
+    .btnOutline {
         font-size: 11px;
     }
 }

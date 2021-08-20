@@ -3,7 +3,7 @@
 }
 
 .contain_notif {
-    background-color: #ccc;
+    background-color: #000012;
     color: #000 !important;
     top: 38px !important;
     left: -15px;
@@ -13,31 +13,18 @@
     color: #249225;
     font-size: 20px;
     font-weight: 700;
-    text-align: center;
-}
-
-.notif {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.img_notif {
-    width: 150px;
-    height: auto;
-    object-fit: contain;
 }
 
 .notif_icon {
     color: #FF0000;
     font-size: 22px;
 }
-
-.text_notif {
-    font-size: 15px;
+.done{
+    font-size: 25px;
+    color: #249225;
+    font-weight: 800;
 }
+
 
 @media only screen and (max-width:768px) {
     .row {
@@ -46,15 +33,10 @@
     .contain_notif {
         width: 300px;
     }
-    .img_notif {
-        width: 100px;
-        height: auto;
-        object-fit: contain;
-    }
-    .text_notif {
-        font-size: 11px;
-    }
     .notif_icon {
+        font-size: 20px;
+    }
+    .done{
         font-size: 20px;
     }
     .title_notif {
@@ -70,20 +52,11 @@
         width: 200px;
         padding: 11px 0 0 2px;
     }
-    .notif {
-        width: 100px;
-    }
-    .img_notif {
-        width: 90px;
-        height: auto;
-        object-fit: contain;
-        align-items: center;
-    }
-    .text_notif {
-        font-size: 11px;
-    }
     .notif_icon {
         font-size: 17px;
+    }
+    .done{
+        font-size: 18px;
     }
     .title_notif {
         font-size: 11px;

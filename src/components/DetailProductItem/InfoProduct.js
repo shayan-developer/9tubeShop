@@ -5,7 +5,7 @@ import styles from "../../styles/InfoProduct.module.css"
 import Button from '../Button'
 import { MdShoppingCart } from "react-icons/md";
 import { FaPlaystation } from "react-icons/fa";
-function InfoProduct({ title, brand, color, price, id ,addToBasket}) {
+const InfoProduct=({ title, brand, color, price, id ,addToBasket}) =>{
     const { t, i18n } = useTranslation()
     const lang = i18n.language
     const border = lang === 'fa' ? styles['right_border'] : styles['left_border']
@@ -20,10 +20,10 @@ function InfoProduct({ title, brand, color, price, id ,addToBasket}) {
                     <span className={styles.title}>{t("brand")}</span>
                     <span className={styles.brand}>{brand === 'sony' && <FaPlaystation />}</span>
                 </div>
-                <div className={styles.line}>
+               {color&& <div className={styles.line}>
                     <span className={styles.title}>{t("color")}</span>
-                    <span className={styles.color}></span>
-                </div>
+                    <span className={styles.color} style={{backgroundColor:color}}></span>
+                </div>}
             </div>
             <div className={styles.detail}>
                 <div className={styles.line} >
@@ -38,4 +38,4 @@ function InfoProduct({ title, brand, color, price, id ,addToBasket}) {
     )
 }
 
-export default InfoProduct
+export default React.memo(InfoProduct)

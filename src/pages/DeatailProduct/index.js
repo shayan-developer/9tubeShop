@@ -25,7 +25,6 @@ function DetailProduct() {
             icon:<MdDone className={styles.done}/>,
             closeIcon: <FaTimesCircle className={styles.notif_icon} />,
             className: styles.contain_notif,
-            duration:11111111111
         });
     },[t])
     const addToBasket =useCallback( () => {
